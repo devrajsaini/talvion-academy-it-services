@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dirsToCopy = ['courses', 'course-assets', 'about-assets', 'contact-assets', 'wp-content'];
+const dirsToCopy = ['courses', 'course-assets', 'about-assets', 'contact-assets', 'wp-content', 'roadmap-assets'];
 
 for (const dir of dirsToCopy) {
   const src = path.join(__dirname, dir);
