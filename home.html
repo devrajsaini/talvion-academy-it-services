@@ -1624,7 +1624,90 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 
 
 <style id="talvion-facility-equal-photo-size-final">
-/* Facility photos: equal side-by-side with modern rounded corners */
+/* Facility photos: equal side-by-side with modern rounded corners and interactive badges */
+.talvion-facility-media-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(3, 15, 64, 0.10) !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  background: #030f40 !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease !important;
+}
+.talvion-facility-media-wrap:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 18px 40px rgba(3, 15, 64, 0.18) !important;
+}
+.talvion-facility-media-wrap img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 !important;
+  border-radius: 20px !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
+}
+.talvion-facility-media-wrap:hover img {
+  transform: scale(1.04) !important;
+  opacity: 0.95 !important;
+}
+.talvion-facility-badge {
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 18px 8px 14px !important;
+  background: rgba(3, 15, 64, 0.82) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 100px !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 5 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+.talvion-facility-media-wrap:hover .talvion-facility-badge {
+  background: linear-gradient(135deg, #543cdf 0%, #3a22c5 100%) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(84, 60, 223, 0.45) !important;
+}
+.talvion-facility-badge .facility-badge-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 50% !important;
+  color: #38bdf8 !important;
+  transition: all 0.3s ease !important;
+}
+.talvion-facility-media-wrap:hover .facility-badge-icon {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  transform: rotate(-5deg) scale(1.1) !important;
+}
+.talvion-facility-badge .facility-badge-title {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  color: #ffffff !important;
+}
+
 @media (min-width: 768px){
   .elementor-2409 .elementor-element.elementor-element-37d18e54,
   .elementor-2409 .elementor-element.elementor-element-b9c2da3,
@@ -1651,30 +1734,6 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
     width:0 !important;
     max-width:none !important;
     min-width:0 !important;
-  }
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 > .elementor-element-759a594b img,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 > .elementor-element-1bac610 img,
-  .elementor-2409 .elementor-element.elementor-element-734e196 > .elementor-element-ad08d92 img,
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 > .talvion-facility-third img,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 > .talvion-facility-third img,
-  .elementor-2409 .elementor-element.elementor-element-734e196 > .talvion-facility-third img{
-    display:block !important;
-    width:100% !important;
-    max-width:100% !important;
-    height:100% !important;
-    aspect-ratio:16 / 9 !important;
-    object-fit:cover !important;
-    object-position:center !important;
-    margin:0 !important;
-    border-radius:20px !important;
-    box-shadow:0 8px 24px rgba(0,0,0,0.10) !important;
-    transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
-  }
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 img:hover,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 img:hover,
-  .elementor-2409 .elementor-element.elementor-element-734e196 img:hover{
-    transform:translateY(-4px) !important;
-    box-shadow:0 16px 36px rgba(0,0,0,0.16) !important;
   }
 }
 @media (max-width: 767px){
@@ -1705,16 +1764,22 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
     height:auto !important;
     min-height:0 !important;
   }
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 img,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 img,
-  .elementor-2409 .elementor-element.elementor-element-734e196 img{
-    display:block !important;
-    border-radius:18px !important;
-    aspect-ratio:16 / 9 !important;
-    object-fit:cover !important;
-    width:100% !important;
-    height:auto !important;
-    margin:0 !important;
+  .talvion-facility-badge {
+    bottom: 12px !important;
+    left: 12px !important;
+    padding: 6px 14px 6px 10px !important;
+    gap: 8px !important;
+  }
+  .talvion-facility-badge .facility-badge-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .talvion-facility-badge .facility-badge-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .talvion-facility-badge .facility-badge-title {
+    font-size: 13px !important;
   }
 }
 </style>
@@ -3639,9 +3704,16 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <div aria-labelledby="e-n-tab-content-1281" class="elementor-element elementor-element-37d18e54 e-con-full e-flex e-con e-child" data-element_type="container" data-id="37d18e54" role="region">
 <div class="elementor-element elementor-element-759a594b elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-id="759a594b" data-widget_type="image.default">
 <div class="elementor-widget-container">
-<img alt="Interactive Online Learning" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/> </div>
+<div class="talvion-facility-media-wrap">
+<img alt="Practical Work" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/>
+<div class="talvion-facility-badge">
+<span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span>
+<span class="facility-badge-title">Practical Work</span>
 </div>
-<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image talvion-facility-wide" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><img alt="Multi-Device Access" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/></div></div></div>
+</div>
+</div>
+</div>
+<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image talvion-facility-wide" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="talvion-facility-media-wrap"><img alt="Online Classes" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/><div class="talvion-facility-badge"><span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span class="facility-badge-title">Online Classes</span></div></div></div></div></div>
 <div aria-labelledby="e-n-tab-content-1281" class="elementor-element elementor-element-e356d83 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="e356d83" role="region">
 <div class="e-con-inner">
 <div aria-labelledby="e-n-tab-content-1281" class="elementor-element elementor-element-6cefec1d e-con-full e-flex e-con e-child" data-element_type="container" data-id="6cefec1d" role="region">
@@ -3714,9 +3786,16 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282" class="elementor-element elementor-element-b9c2da3 e-con-full e-flex e-con e-child" data-element_type="container" data-id="b9c2da3" role="region region">
 <div class="elementor-element elementor-element-1bac610 elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-id="1bac610" data-widget_type="image.default">
 <div class="elementor-widget-container">
-<img alt="Interactive Online Learning" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/> </div>
+<div class="talvion-facility-media-wrap">
+<img alt="Practical Work" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/>
+<div class="talvion-facility-badge">
+<span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span>
+<span class="facility-badge-title">Practical Work</span>
 </div>
-<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><img alt="Multi-Device Access" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/></div></div></div>
+</div>
+</div>
+</div>
+<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="talvion-facility-media-wrap"><img alt="Online Classes" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/><div class="talvion-facility-badge"><span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></span><span class="facility-badge-title">Online Classes</span></div></div></div></div></div>
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282" class="elementor-element elementor-element-bfa6c56 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="bfa6c56" role="region region">
 <div class="e-con-inner">
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282" class="elementor-element elementor-element-6a143fd e-con-full e-flex e-con e-child" data-element_type="container" data-id="6a143fd" role="region region">
@@ -3789,9 +3868,16 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282 e-n-tab-content-1283" class="elementor-element elementor-element-734e196 e-con-full e-flex e-con e-child" data-element_type="container" data-id="734e196" role="region region region">
 <div class="elementor-element elementor-element-ad08d92 elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-id="ad08d92" data-widget_type="image.default">
 <div class="elementor-widget-container">
-<img alt="Interactive Online Learning" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/> </div>
+<div class="talvion-facility-media-wrap">
+<img alt="Practical Work" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/>
+<div class="talvion-facility-badge">
+<span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span>
+<span class="facility-badge-title">Practical Work</span>
 </div>
-<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><img alt="Multi-Device Access" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/></div></div></div>
+</div>
+</div>
+</div>
+<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="talvion-facility-media-wrap"><img alt="Online Classes" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/><div class="talvion-facility-badge"><span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></span><span class="facility-badge-title">Online Classes</span></div></div></div></div></div>
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282 e-n-tab-content-1283" class="elementor-element elementor-element-2dff629 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="2dff629" role="region region region">
 <div class="e-con-inner">
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282 e-n-tab-content-1283" class="elementor-element elementor-element-6b6f5f5 e-con-full e-flex e-con e-child" data-element_type="container" data-id="6b6f5f5" role="region region region">

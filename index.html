@@ -1624,7 +1624,90 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 
 
 <style id="talvion-facility-equal-photo-size-final">
-/* Facility photos: equal side-by-side with modern rounded corners */
+/* Facility photos: equal side-by-side with modern rounded corners and interactive badges */
+.talvion-facility-media-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(3, 15, 64, 0.10) !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  background: #030f40 !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease !important;
+}
+.talvion-facility-media-wrap:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 18px 40px rgba(3, 15, 64, 0.18) !important;
+}
+.talvion-facility-media-wrap img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  margin: 0 !important;
+  border-radius: 20px !important;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease !important;
+}
+.talvion-facility-media-wrap:hover img {
+  transform: scale(1.04) !important;
+  opacity: 0.95 !important;
+}
+.talvion-facility-badge {
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 18px 8px 14px !important;
+  background: rgba(3, 15, 64, 0.82) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  border-radius: 100px !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  z-index: 5 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+.talvion-facility-media-wrap:hover .talvion-facility-badge {
+  background: linear-gradient(135deg, #543cdf 0%, #3a22c5 100%) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(84, 60, 223, 0.45) !important;
+}
+.talvion-facility-badge .facility-badge-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 50% !important;
+  color: #38bdf8 !important;
+  transition: all 0.3s ease !important;
+}
+.talvion-facility-media-wrap:hover .facility-badge-icon {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  transform: rotate(-5deg) scale(1.1) !important;
+}
+.talvion-facility-badge .facility-badge-title {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  color: #ffffff !important;
+}
+
 @media (min-width: 768px){
   .elementor-2409 .elementor-element.elementor-element-37d18e54,
   .elementor-2409 .elementor-element.elementor-element-b9c2da3,
@@ -1651,30 +1734,6 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
     width:0 !important;
     max-width:none !important;
     min-width:0 !important;
-  }
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 > .elementor-element-759a594b img,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 > .elementor-element-1bac610 img,
-  .elementor-2409 .elementor-element.elementor-element-734e196 > .elementor-element-ad08d92 img,
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 > .talvion-facility-third img,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 > .talvion-facility-third img,
-  .elementor-2409 .elementor-element.elementor-element-734e196 > .talvion-facility-third img{
-    display:block !important;
-    width:100% !important;
-    max-width:100% !important;
-    height:100% !important;
-    aspect-ratio:16 / 9 !important;
-    object-fit:cover !important;
-    object-position:center !important;
-    margin:0 !important;
-    border-radius:20px !important;
-    box-shadow:0 8px 24px rgba(0,0,0,0.10) !important;
-    transition:transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
-  }
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 img:hover,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 img:hover,
-  .elementor-2409 .elementor-element.elementor-element-734e196 img:hover{
-    transform:translateY(-4px) !important;
-    box-shadow:0 16px 36px rgba(0,0,0,0.16) !important;
   }
 }
 @media (max-width: 767px){
@@ -1705,16 +1764,22 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
     height:auto !important;
     min-height:0 !important;
   }
-  .elementor-2409 .elementor-element.elementor-element-37d18e54 img,
-  .elementor-2409 .elementor-element.elementor-element-b9c2da3 img,
-  .elementor-2409 .elementor-element.elementor-element-734e196 img{
-    display:block !important;
-    border-radius:18px !important;
-    aspect-ratio:16 / 9 !important;
-    object-fit:cover !important;
-    width:100% !important;
-    height:auto !important;
-    margin:0 !important;
+  .talvion-facility-badge {
+    bottom: 12px !important;
+    left: 12px !important;
+    padding: 6px 14px 6px 10px !important;
+    gap: 8px !important;
+  }
+  .talvion-facility-badge .facility-badge-icon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .talvion-facility-badge .facility-badge-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .talvion-facility-badge .facility-badge-title {
+    font-size: 13px !important;
   }
 }
 </style>
@@ -2446,62 +2511,466 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 
 </style>
 
-<style id="talvion-clean-drawer">
+<style id="talvion-mobile-drawer-styles">
 /* ======================================================
-   TALVION: Clean Drawer - Only Apply Now button visible
-   Hide nav links from offcanvas drawer (bottom nav handles navigation)
+   TALVION: Modern Mobile Drawer Menu (Robust & Self-Contained)
    ====================================================== */
 
-/* Hide everything inside drawer EXCEPT the close btn action wrap */
-.jws-offcanvas .jws-offcanvas-text > *:not(.jws-offcanvas-action-wrap) {
-  display: none !important;
-  height: 0 !important;
-  overflow: hidden !important;
+/* Overlay backdrop */
+.jws-offcanvas-parent-wrapper .jws-offcanvas-overlay,
+.jws-offcanvas-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(3, 15, 64, 0.65) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  z-index: 999998 !important;
   opacity: 0 !important;
+  visibility: hidden !important;
   pointer-events: none !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
 
-/* But SHOW the Apply Now button action wrap */
-.jws-offcanvas .jws-offcanvas-text > .jws-offcanvas-action-wrap {
-  display: flex !important;
-  height: auto !important;
-  overflow: visible !important;
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas-overlay,
+#2b5392e-overlay.active .jws-offcanvas-overlay,
+.jws-offcanvas-overlay.active {
   opacity: 1 !important;
+  visibility: visible !important;
   pointer-events: auto !important;
 }
 
-/* Keep the close icon action wrap visible too */
-.jws-offcanvas-close-icon-wrapper,
-.jws-offcanvas-action-wrap:has(.jws-offcanvas-close) {
-  display: flex !important;
-  height: auto !important;
-  overflow: visible !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
-
-/* Make drawer compact - only show close + Apply Now */
-.jws-offcanvas .jws-offcanvas-text.jws-offcanvas-content-data {
+/* Offcanvas drawer container */
+.jws-offcanvas,
+.jws-offcanvas.position-at-left,
+.jws-offcanvas-parent-wrapper .jws-offcanvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 320px !important;
+  max-width: 85vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background: #ffffff !important;
+  z-index: 9999999 !important;
+  transform: translateX(-100%) !important;
+  transform: translate3d(-100%, 0, 0) !important;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.32s !important;
+  box-shadow: 10px 0 35px rgba(3, 15, 64, 0.22) !important;
+  overflow: hidden !important;
   display: flex !important;
   flex-direction: column !important;
-  padding: 20px 20px 30px 20px !important;
-  gap: 16px !important;
-  min-height: unset !important;
+  visibility: hidden !important;
 }
 
-/* Clean up the Apply Now button styling in drawer */
-.jws-offcanvas .jws-offcanvas-action-wrap a[href*="contact"],
-.jws-offcanvas .jws-offcanvas-action-wrap a {
+#2b5392e-overlay.active #offcanvas-2b5392e,
+.jws-offcanvas-parent-wrapper.active #offcanvas-2b5392e,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas.position-at-left,
+.jws-offcanvas.jws-offcanvas-show,
+#offcanvas-2b5392e.jws-offcanvas-show,
+.jws-offcanvas.active {
+  transform: translateX(0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+}
+
+.jws-offcanvas .jws-offcanvas-content {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.jws-offcanvas-text.talvion-mobile-drawer {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
   width: 100% !important;
-  display: block !important;
-  text-align: center !important;
-  border-radius: 10px !important;
-  padding: 14px 24px !important;
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  background: #07153a !important;
-  color: #ffffff !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  background: #ffffff !important;
+}
+
+/* Mobile Header & Hamburger Trigger */
+@media (max-width: 1024px) {
+  .site-header .elementor-element-44c7c84 > .e-con-inner,
+  .site-header .elementor-element-44c7c84 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 16px !important;
+  }
+
+  .site-header .elementor-element-8e08b80 {
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  .site-header .elementor-element-5c47232 {
+    display: none !important;
+  }
+
+  .site-header .elementor-element-684a267 {
+    width: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+  }
+
+  .site-header .elementor-element-d9c1f26 .btn {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+  }
+
+  .site-header .elementor-element-2b5392e,
+  .site-header .jws-offcanvas-action-wrap {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
+  .site-header .jws-offcanvas-trigger {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+    background: #f4f5f9 !important;
+    color: #030f40 !important;
+    font-size: 20px !important;
+    text-decoration: none !important;
+    border: 1px solid #e5e8ee !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .site-header .jws-offcanvas-trigger:hover,
+  .site-header .jws-offcanvas-trigger:active {
+    background: #543cdf !important;
+    color: #ffffff !important;
+    border-color: #543cdf !important;
+  }
+}
+
+/* Header inside drawer: Logo & Close */
+.talvion-drawer-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 18px 20px 14px 20px !important;
+  border-bottom: 1px solid #edf0f5 !important;
+  background: #ffffff !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+}
+
+.talvion-drawer-logo {
+  display: flex !important;
+  align-items: center !important;
   text-decoration: none !important;
+}
+
+.talvion-drawer-logo img {
+  height: 34px !important;
+  max-height: 34px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.talvion-drawer-close {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: #f4f5f9 !important;
+  border: none !important;
+  color: #030f40 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+}
+
+.talvion-drawer-close:hover,
+.talvion-drawer-close:active {
+  background: #e9ecf4 !important;
+  color: #543cdf !important;
+  transform: rotate(90deg) !important;
+}
+
+/* Search Box */
+.talvion-drawer-search {
+  padding: 14px 20px 10px 20px !important;
+  background: #ffffff !important;
+}
+
+.talvion-search-form {
+  display: flex !important;
+  align-items: center !important;
+  background: #f7f8fa !important;
+  border: 1.5px solid #e5e8ee !important;
+  border-radius: 10px !important;
+  padding: 0 12px 0 14px !important;
+  height: 44px !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-search-form:focus-within {
+  border-color: #543cdf !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(84, 60, 223, 0.12) !important;
+}
+
+.talvion-search-form input {
+  flex: 1 !important;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  font-size: 13.5px !important;
+  color: #030f40 !important;
+  padding: 0 !important;
+  font-family: inherit !important;
+}
+
+.talvion-search-form input::placeholder {
+  color: #8c95a6 !important;
+}
+
+.talvion-search-form button {
+  background: none !important;
+  border: none !important;
+  padding: 0 0 0 8px !important;
+  color: #543cdf !important;
+  font-size: 18px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: unset !important;
+}
+
+/* Navigation List */
+.talvion-drawer-nav {
+  flex: 1 !important;
+  padding: 6px 14px !important;
+}
+
+.talvion-mobile-menu {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.talvion-mobile-menu > li {
+  margin-bottom: 2px !important;
+  border-bottom: 1px solid #f2f4f7 !important;
+  list-style: none !important;
+}
+
+.talvion-mobile-menu > li:last-child {
+  border-bottom: none !important;
+}
+
+.talvion-nav-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 10px !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #030f40 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-nav-link:hover,
+.talvion-nav-link:active,
+.talvion-mobile-menu > li.active > .talvion-nav-link {
+  background: #f4f2ff !important;
+  color: #543cdf !important;
+}
+
+.talvion-nav-link .nav-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 8px !important;
+  background: rgba(84, 60, 223, 0.08) !important;
+  color: #543cdf !important;
+  font-size: 16px !important;
+  transition: all 0.2s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.talvion-nav-link:hover .nav-icon {
+  background: #543cdf !important;
+  color: #ffffff !important;
+}
+
+.talvion-nav-link .nav-label {
+  flex: 1 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+/* Accordion in Courses */
+.talvion-nav-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.talvion-nav-row .talvion-nav-link {
+  flex: 1 !important;
+}
+
+.talvion-accordion-btn {
+  background: none !important;
+  border: none !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #667085 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  margin-right: 4px !important;
+}
+
+.talvion-accordion-btn:hover {
+  background: #f0edf9 !important;
+  color: #543cdf !important;
+}
+
+.has-sub-accordion.expanded .talvion-accordion-btn i {
+  transform: rotate(180deg) !important;
+}
+
+.talvion-sub-menu {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 0 0 38px !important;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.has-sub-accordion.expanded .talvion-sub-menu {
+  max-height: 380px !important;
+  opacity: 1 !important;
+  padding-bottom: 8px !important;
+}
+
+.talvion-sub-menu li {
+  margin-bottom: 2px !important;
+  list-style: none !important;
+}
+
+.talvion-sub-menu a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 10px !important;
+  border-radius: 6px !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  color: #475467 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-sub-menu a:hover {
+  color: #543cdf !important;
+  background: #f8f7ff !important;
+}
+
+.talvion-sub-menu a i {
+  font-size: 14px !important;
+  color: #543cdf !important;
+  width: 18px !important;
+  text-align: center !important;
+}
+
+.talvion-sub-menu a.all-courses-link {
+  font-weight: 700 !important;
+  color: #543cdf !important;
+  margin-top: 4px !important;
+}
+
+/* Footer / CTA Area */
+.talvion-drawer-footer {
+  padding: 16px 20px 24px 20px !important;
+  border-top: 1px solid #edf0f5 !important;
+  background: #fbfcff !important;
+  margin-top: auto !important;
+}
+
+.talvion-drawer-apply-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  padding: 13px 20px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #030f40 0%, #543cdf 100%) !important;
+  color: #ffffff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(84, 60, 223, 0.25) !important;
+  transition: all 0.25s ease !important;
+}
+
+.talvion-drawer-apply-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(84, 60, 223, 0.35) !important;
+  color: #ffffff !important;
+}
+
+.talvion-drawer-contact-info {
+  margin-top: 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.drawer-contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #667085 !important;
+  text-decoration: none !important;
+}
+
+.drawer-contact-item:hover {
+  color: #543cdf !important;
 }
 </style>
 
@@ -2921,201 +3390,94 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <div class="jws-offcanvas-parent-wrapper jws-module-content uaoffcanvas-2b5392e" data-canvas-unit="" data-canvas-unit-mobile="" data-canvas-unit-tablet="" data-canvas-width="" data-canvas-width-mobile="" data-canvas-width-tablet="" data-close-on-esc="yes" data-close-on-overlay="yes" data-content="template" data-id="2b5392e" data-trigger-on="button" id="2b5392e-overlay">
 <div class="jws-offcanvas jws-custom-offcanvas jws-offcanvas-type-normal jws-offcanvas-shadow-inset position-at-left" id="offcanvas-2b5392e">
 <div class="jws-offcanvas-content">
-<div class="jws-offcanvas-text jws-offcanvas-content-data jws-scrollbar">
-<div class="jws-offcanvas-action-wrap">
-<div class="jws-offcanvas-close-icon-wrapper elementor-icon-wrapper elementor-clickable jws-offcanvas-close-icon-position-right-top">
-<span class="jws-offcanvas-close elementor-icon-link elementor-clickable">
-<span class="jws-offcanvas-close-icon">
-<i class="jws-icon-x-light"></i>
-</span>
-</span>
-</div>
-</div>
-<style id="elementor-post-12726">.elementor-12726 .elementor-element.elementor-element-ccdcd1e{--display:flex;--background-transition:0.3s;--padding-top:40px;--padding-bottom:40px;--padding-left:20px;--padding-right:20px;}.elementor-12726 .elementor-element.elementor-element-0c041c8 .jws_search > button{text-align:left;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform{min-height:30px;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform button{color:var( --e-global-color-primary );background:#FFFFFF;padding:0px 0px 0px 0px;min-width:0px;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform button i{width:40px;height:40px;line-height:40px;}.elementor-12726 .elementor-element.elementor-element-0c041c8  form.searchform input{border-style:none;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform input{padding:0px 0px 0px 0px;}.elementor-12726 .elementor-element.elementor-element-bada123 > .elementor-widget-container{margin:0px 0px 30px 0px;}.elementor-12726 .elementor-element.elementor-element-bada123 > .elementor-widget-container > .jws_main_menu > .jws_main_menu_inner > ul.nav > li > a{font-size:14px;font-weight:600;}.elementor-12726 .elementor-element.elementor-element-bada123 > .elementor-widget-container > .jws_main_menu > .jws_main_menu_inner > ul > li > a{border-style:solid;border-width:0px 0px 1px 0px;border-color:var( --e-global-color-3fada09 );}.elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li a:hover , 
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.current-menu-item > a,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.current-menu-ancestor>a,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.active > a,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.active > .btn-sub-menu,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li a:hover i
-                            {color:var( --e-global-color-accent );}.elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li a{border-bottom-style:solid;border-color:var( --e-global-color-3fada09 );border-bottom-width:1px;}</style><style>.elementor-12726 .elementor-element.elementor-element-ccdcd1e{--display:flex;--background-transition:0.3s;--padding-top:40px;--padding-bottom:40px;--padding-left:20px;--padding-right:20px;}.elementor-12726 .elementor-element.elementor-element-0c041c8 .jws_search > button{text-align:left;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform{min-height:30px;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform button{color:var( --e-global-color-primary );background:#FFFFFF;padding:0px 0px 0px 0px;min-width:0px;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform button i{width:40px;height:40px;line-height:40px;}.elementor-12726 .elementor-element.elementor-element-0c041c8  form.searchform input{border-style:none;}.elementor-12726 .elementor-element.elementor-element-0c041c8 form.searchform input{padding:0px 0px 0px 0px;}.elementor-12726 .elementor-element.elementor-element-bada123 > .elementor-widget-container{margin:0px 0px 30px 0px;}.elementor-12726 .elementor-element.elementor-element-bada123 > .elementor-widget-container > .jws_main_menu > .jws_main_menu_inner > ul.nav > li > a{font-size:14px;font-weight:600;}.elementor-12726 .elementor-element.elementor-element-bada123 > .elementor-widget-container > .jws_main_menu > .jws_main_menu_inner > ul > li > a{border-style:solid;border-width:0px 0px 1px 0px;border-color:var( --e-global-color-3fada09 );}.elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li a:hover , 
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.current-menu-item > a,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.current-menu-ancestor>a,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.active > a,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li.active > .btn-sub-menu,
-                            .elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li a:hover i
-                            {color:var( --e-global-color-accent );}.elementor-12726 .elementor-element.elementor-element-bada123 .jws_main_menu .menu-item-design-standard .sub-menu li a{border-bottom-style:solid;border-color:var( --e-global-color-3fada09 );border-bottom-width:1px;}</style> <div class="elementor elementor-12726" data-elementor-id="12726" data-elementor-type="wp-post">
-<div class="elementor-element elementor-element-ccdcd1e e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="ccdcd1e">
-<div class="e-con-inner">
-<div class="elementor-element elementor-element-c97cf61 elementor-widget elementor-widget-jws_logo" data-element_type="widget" data-id="c97cf61" data-widget_type="jws_logo.default">
-<div class="elementor-widget-container">
-<div class="elementor-logo">
-<a href="/">
-<span class="logo-inner">
-<img alt="" class="logo-image attachment-full" decoding="async" height="40" src="https://talvionix.in/brand/talvion-logo.png" style="max-height: 42px; width: auto;" width="172"/> </span>
-<span class="logo-sticky">
-</span>
-<span class="logo-special">
-</span>
-</a>
-</div>
-</div>
-</div>
-<div class="elementor-element elementor-element-bada123 elementor_jws_menu_layout_menu_vertical elementor-jws-menu-skin-skin1 elementor-before-menu-skin-none elementor-widget elementor-widget-jws_menu_nav" data-element_type="widget" data-id="bada123" data-widget_type="jws_menu_nav.default">
-<div class="elementor-widget-container">
-<div class="jws_main_menu">
-<div class="jws_main_menu_inner">
-<ul class="nav" id="menu-1-bada123">
-<li class="current-menu-item current_page_item menu-item menu-item-type-custom menu-item-object-custom  page_item page-item-2409  menu-item-design-standard"><a href="/home.html"><span>Home</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12498 menu-item-design-mega_menu menu-item-position-center menu_has_shortcode" id="menu-item-12498"><a href="/courses.html"><span>Courses</span><i class="jws-icon-caret-down-light"></i></a>
-<div class="sub-menu-dropdown mega_menu center"><div class="jws_mega_sub">
-<style>
-.elementor-12496 .elementor-element.elementor-element-d5b027a{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--gap:0vw 2.5vw;--background-transition:0.3s;--padding-top:28px;--padding-bottom:28px;--padding-left:32px;--padding-right:32px;}
-.elementor-12496 .elementor-element.elementor-element-d5b027a:not(.elementor-motion-effects-element-type-background), .elementor-12496 .elementor-element.elementor-element-d5b027a > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#FFFFFF;border-radius:12px;box-shadow:0px 20px 40px rgba(3,15,64,0.12);}
-.elementor-12496 .elementor-element.elementor-element-b19f1a9{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}
-.elementor-12496 .elementor-element.elementor-element-98ef054 > .elementor-widget-container,
-.elementor-12496 .elementor-element.elementor-element-fef2b8b > .elementor-widget-container,
-.elementor-12496 .elementor-element.elementor-element-c414efe > .elementor-widget-container{border-style:solid;border-width:0px 0px 1px 0px;border-color:var(--e-global-color-3fada09);padding-bottom:8px;margin-bottom:12px;}
-.elementor-12496 .ld-fh-element{font-family:"Plus Jakarta Sans", Sans-serif;font-size:12px;letter-spacing:1px;font-weight:700;text-transform:uppercase;color:var(--e-global-color-primary);margin:0;}
-.elementor-12496 .elementor-icon-list-items{margin-top:4px !important;}
-.elementor-12496 .elementor-icon-list-item{font-size:14px;font-weight:500;line-height:22px;padding:6px 0;transition:all 0.2s ease;}
-.elementor-12496 .elementor-icon-list-item a{color:var(--e-global-color-primary);display:flex;align-items:center;text-decoration:none;gap:10px;}
-.elementor-12496 .elementor-icon-list-item:hover a{color:var(--e-global-color-accent);transform:translateX(3px);}
-.elementor-12496 .elementor-icon-list-icon{font-size:17px;color:var(--e-global-color-accent);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;background:rgba(84,60,223,0.08);border-radius:6px;}
-.elementor-12496 .elementor-element.elementor-element-6607657{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}
-.elementor-12496 .elementor-element.elementor-element-ea1931c{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}
-.elementor-12496 .elementor-element.elementor-element-5a046e7{--display:flex;--min-height:260px;--justify-content:flex-end;--align-items:center;--container-widget-width:100%;--background-transition:0.3s;border-radius:12px;padding:24px;background:linear-gradient(135deg, #030F40 0%, #172B75 100%);position:relative;overflow:hidden;}
-@media(min-width:768px){
-    .elementor-12496 .elementor-element.elementor-element-b19f1a9{--width:27%;}
-    .elementor-12496 .elementor-element.elementor-element-6d13de1{--width:27%;}
-    .elementor-12496 .elementor-element.elementor-element-6607657{--width:25%;}
-    .elementor-12496 .elementor-element.elementor-element-ea1931c{--width:21%;}
-}
-.menu-item-12498 > .sub-menu-dropdown {width: 1280px;}
-</style>
-<div class="elementor elementor-12496" data-elementor-id="12496" data-elementor-type="wp-post">
-<div class="elementor-element elementor-element-d5b027a e-con-full e-flex e-con e-parent" data-element_type="container" data-id="d5b027a">
-<!-- Column 1: AI & Data Science -->
-<div class="elementor-element elementor-element-b19f1a9 e-con-full e-flex e-con e-child">
-<div class="elementor-element elementor-element-98ef054 elementor-widget elementor-widget-jws_advanced_heading">
-<div class="elementor-widget-container">
-<div class="ld-fancy-heading pos-rel"><div class="ld-fh-element d-inline-block pos-rel">AI &amp; Data Science</div></div>
-</div>
-</div>
-<div class="jws-menu-list">
-<ul class="elementor-icon-list-items columns-1 default">
-<li class="elementor-icon-list-item">
-<a href="/courses/path-to-financial-independence-strategies-for-financial-freedom/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-laptop-fill"></i></span>
-<span class="elementor-icon-list-text">AI Automation &amp; GenAI</span>
-</a>
-</li>
-<li class="elementor-icon-list-item">
-<a href="/courses/digital-transformation-for-business-leaders/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-chart-bar-fill"></i></span>
-<span class="elementor-icon-list-text">Data Science &amp; Machine Learning</span>
-</a>
-</li>
-<li class="elementor-icon-list-item">
-<a href="/courses/personal-finance-financial-security-thinking-principles/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-chart-pie-slice"></i></span>
-<span class="elementor-icon-list-text">Business Analyst: SQL &amp; Power BI</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<!-- Column 2: Software Engineering -->
-<div class="elementor-element elementor-element-6d13de1 e-con-full e-flex e-con e-child">
-<div class="elementor-element elementor-element-fef2b8b elementor-widget elementor-widget-jws_advanced_heading">
-<div class="elementor-widget-container">
-<div class="ld-fancy-heading pos-rel"><div class="ld-fh-element d-inline-block pos-rel">Software Engineering</div></div>
-</div>
-</div>
-<div class="jws-menu-list">
-<ul class="elementor-icon-list-items columns-1 default">
-<li class="elementor-icon-list-item">
-<a href="/courses/workflow-strategy-from-capture-to-output/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-code-light"></i></span>
-<span class="elementor-icon-list-text">Java Full Stack (Spring Boot + React)</span>
-</a>
-</li>
-<li class="elementor-icon-list-item">
-<a href="/courses/java-programming-masterclass-for-software-developers/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-squares-four-light"></i></span>
-<span class="elementor-icon-list-text">MERN Full Stack Development</span>
-</a>
-</li>
-<li class="elementor-icon-list-item">
-<a href="/courses/improve-your-self-esteem-and-gain-confidence/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-phone-call-light"></i></span>
-<span class="elementor-icon-list-text">Android Development with Kotlin</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<!-- Column 3: Cloud & Security -->
-<div class="elementor-element elementor-element-6607657 e-con-full e-flex e-con e-child">
-<div class="elementor-element elementor-element-c414efe elementor-widget elementor-widget-jws_advanced_heading">
-<div class="elementor-widget-container">
-<div class="ld-fancy-heading pos-rel"><div class="ld-fh-element d-inline-block pos-rel">Cloud &amp; Security</div></div>
-</div>
-</div>
-<div class="jws-menu-list">
-<ul class="elementor-icon-list-items columns-1 default">
-<li class="elementor-icon-list-item">
-<a href="/courses/how-to-market-yourself-as-coach-or-consultant-market/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-gear"></i></span>
-<span class="elementor-icon-list-text">DevOps: Docker, K8s &amp; AWS</span>
-</a>
-</li>
-<li class="elementor-icon-list-item">
-<a href="/courses/the-data-science-course-2023-complete-data-science/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-seal-question"></i></span>
-<span class="elementor-icon-list-text">Cyber Security &amp; Ethical Hacking</span>
-</a>
-</li>
-<li class="elementor-icon-list-item">
-<a href="/courses/problem-solving-skills-for-better-success-2/index.html">
-<span class="elementor-icon-list-icon"><i aria-hidden="true" class="jws-icon-check-circle-fill"></i></span>
-<span class="elementor-icon-list-text">Software QA &amp; Automation Testing</span>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<!-- Column 4: Promo Action Box -->
-<div class="elementor-element elementor-element-ea1931c e-con-full e-flex e-con e-child">
-<div class="elementor-element elementor-element-5a046e7 e-con-full e-flex e-con e-child">
-<div style="width:100%; color:#fff; text-align:left;">
-<span style="display:inline-block; font-size:11px; text-transform:uppercase; letter-spacing:1px; background:#FFC119; color:#030F40; font-weight:700; padding:3px 8px; border-radius:4px; margin-bottom:10px;">All Programs</span>
-<h4 style="color:#fff; font-size:18px; line-height:24px; font-weight:700; margin:0 0 10px 0;">Accelerate Your Tech Career</h4>
-<p style="color:rgba(255,255,255,0.75); font-size:13px; line-height:18px; margin:0 0 16px 0;">Live mentoring, real-world industry capstones &amp; 100% placement support.</p>
-<a class="btn btn-solid" href="/courses.html" style="display:inline-flex; align-items:center; gap:8px; background:#FFC119; color:#030F40; font-weight:700; font-size:13px; padding:10px 18px; border-radius:6px; text-decoration:none;">
-<span>Explore All</span>
-<i class="jws-icon-arrow-right" style="font-size:12px;"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div></div></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-design-standard"><a href="/roadmap.html"><span>Roadmap</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-design-standard"><a href="/about.html"><span>About</span></a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-design-standard"><a href="/contact.html"><span>Contact</span></a></li>
-</ul>
-<div style="margin-top: 25px; padding: 0 10px;">
-<a class="btn btn-md elementor-repeater-item-c014bbf" href="/courses.html" style="display: block; text-align: center; border-radius: 8px; font-weight: 600; padding: 12px 20px; text-decoration: none; color: #fff; background-color: var(--e-global-color-primary);">
-<span class="jws_account_text">Apply Now</span>
-</a>
-</div> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div class="jws-offcanvas-text jws-offcanvas-content-data jws-scrollbar talvion-mobile-drawer">
+  <!-- Top Header: Logo + Close Button -->
+  <div class="talvion-drawer-header">
+    <a href="/home.html" class="talvion-drawer-logo">
+      <img alt="Talvion Academy" src="https://talvionix.in/brand/talvion-logo.png" height="34" />
+    </a>
+    <button type="button" class="talvion-drawer-close jws-offcanvas-close" aria-label="Close menu">
+      <i class="jws-icon-x-light"></i>
+    </button>
+  </div>
+
+  <!-- Search Box -->
+  <div class="talvion-drawer-search">
+    <form action="/courses.html" method="get" class="talvion-search-form">
+      <input type="text" name="search" placeholder="What do you want to learn?..." autocomplete="off" />
+      <button type="submit" aria-label="Search">
+        <i class="jws-icon-magnifying-glass"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- Menu Navigation List -->
+  <div class="talvion-drawer-nav">
+    <ul class="talvion-mobile-menu">
+      <li class="menu-item-home active">
+        <a href="/home.html" class="talvion-nav-link">
+          <span class="nav-icon"><i class="jws-icon-house-light"></i></span>
+          <span class="nav-label">Home</span>
+        </a>
+      </li>
+
+      <li class="menu-item-courses has-sub-accordion">
+        <div class="talvion-nav-row">
+          <a href="/courses.html" class="talvion-nav-link">
+            <span class="nav-icon"><i class="jws-icon-graduation-cap-fill"></i></span>
+            <span class="nav-label">Courses</span>
+          </a>
+          <button type="button" class="talvion-accordion-btn" aria-label="Toggle courses submenu">
+            <i class="jws-icon-caret-down-light"></i>
+          </button>
+        </div>
+        <ul class="talvion-sub-menu">
+          <li><a href="/courses.html?category=ai-data"><i class="jws-icon-laptop-fill"></i> AI & Data Science</a></li>
+          <li><a href="/courses.html?category=software"><i class="jws-icon-code-light"></i> Software Engineering</a></li>
+          <li><a href="/courses.html?category=cloud"><i class="jws-icon-gear"></i> Cloud & DevOps</a></li>
+          <li><a href="/courses.html?category=security"><i class="jws-icon-seal-question"></i> Cyber Security & QA</a></li>
+          <li><a href="/courses.html" class="all-courses-link"><span>View All 25+ Programs</span> <i class="jws-icon-arrow-right"></i></a></li>
+        </ul>
+      </li>
+
+      <li class="menu-item-roadmap">
+        <a href="/roadmap.html" class="talvion-nav-link">
+          <span class="nav-icon"><i class="jws-icon-map-pin-light"></i></span>
+          <span class="nav-label">Roadmap</span>
+        </a>
+      </li>
+
+      <li class="menu-item-about">
+        <a href="/about.html" class="talvion-nav-link">
+          <span class="nav-icon"><i class="jws-icon-user-light"></i></span>
+          <span class="nav-label">About</span>
+        </a>
+      </li>
+
+      <li class="menu-item-contact">
+        <a href="/contact.html" class="talvion-nav-link">
+          <span class="nav-icon"><i class="jws-icon-phone-call-light"></i></span>
+          <span class="nav-label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Drawer Footer: Apply Now Button & Quick Contacts -->
+  <div class="talvion-drawer-footer">
+    <a href="/courses.html" class="talvion-drawer-apply-btn">
+      <span>Apply Now</span>
+      <i class="jws-icon-arrow-right"></i>
+    </a>
+    <div class="talvion-drawer-contact-info">
+      <a href="tel:+919876543210" class="drawer-contact-item">
+        <i class="jws-icon-phone-call-light"></i> +91 98765 43210
+      </a>
+      <a href="mailto:info@talvionix.in" class="drawer-contact-item">
+        <i class="jws-icon-envelope-light"></i> info@talvionix.in
+      </a>
+    </div>
+  </div>
 </div>
 </div>
 </div>
@@ -3123,7 +3485,7 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 </div>
 <div class="jws-offcanvas-action-wrap">
 <div class="jws-button-wrapper elementor-button-wrapper elementor-align-left">
-<a class="jws-offcanvas-trigger action jws-elementor-button" data-offcanvas="2b5392e" href="javascript:void(0);">
+<a class="jws-offcanvas-trigger action jws-elementor-button" data-offcanvas="2b5392e" href="javascript:void(0);" aria-label="Open menu">
 <span class="elementor-button-content-wrapper">
 <span class="elementor-button-icon elementor-align-icon-right">
 <i class="jws-icon-text-align-left"></i>
@@ -3136,8 +3498,6 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 </div>
 </div>
 </div>
-</div>
-</div> </div>
 </div>
 </div><!-- .site-branding-container -->
 </header><!-- #masthead -->
@@ -3344,9 +3704,16 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <div aria-labelledby="e-n-tab-content-1281" class="elementor-element elementor-element-37d18e54 e-con-full e-flex e-con e-child" data-element_type="container" data-id="37d18e54" role="region">
 <div class="elementor-element elementor-element-759a594b elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-id="759a594b" data-widget_type="image.default">
 <div class="elementor-widget-container">
-<img alt="Interactive Online Learning" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/> </div>
+<div class="talvion-facility-media-wrap">
+<img alt="Practical Work" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/>
+<div class="talvion-facility-badge">
+<span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span>
+<span class="facility-badge-title">Practical Work</span>
 </div>
-<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image talvion-facility-wide" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><img alt="Multi-Device Access" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/></div></div></div>
+</div>
+</div>
+</div>
+<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image talvion-facility-wide" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="talvion-facility-media-wrap"><img alt="Online Classes" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/><div class="talvion-facility-badge"><span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><span class="facility-badge-title">Online Classes</span></div></div></div></div></div>
 <div aria-labelledby="e-n-tab-content-1281" class="elementor-element elementor-element-e356d83 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="e356d83" role="region">
 <div class="e-con-inner">
 <div aria-labelledby="e-n-tab-content-1281" class="elementor-element elementor-element-6cefec1d e-con-full e-flex e-con e-child" data-element_type="container" data-id="6cefec1d" role="region">
@@ -3419,9 +3786,16 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282" class="elementor-element elementor-element-b9c2da3 e-con-full e-flex e-con e-child" data-element_type="container" data-id="b9c2da3" role="region region">
 <div class="elementor-element elementor-element-1bac610 elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-id="1bac610" data-widget_type="image.default">
 <div class="elementor-widget-container">
-<img alt="Interactive Online Learning" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/> </div>
+<div class="talvion-facility-media-wrap">
+<img alt="Practical Work" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/>
+<div class="talvion-facility-badge">
+<span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span>
+<span class="facility-badge-title">Practical Work</span>
 </div>
-<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><img alt="Multi-Device Access" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/></div></div></div>
+</div>
+</div>
+</div>
+<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="talvion-facility-media-wrap"><img alt="Online Classes" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/><div class="talvion-facility-badge"><span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></span><span class="facility-badge-title">Online Classes</span></div></div></div></div></div>
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282" class="elementor-element elementor-element-bfa6c56 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="bfa6c56" role="region region">
 <div class="e-con-inner">
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282" class="elementor-element elementor-element-6a143fd e-con-full e-flex e-con e-child" data-element_type="container" data-id="6a143fd" role="region region">
@@ -3494,9 +3868,16 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282 e-n-tab-content-1283" class="elementor-element elementor-element-734e196 e-con-full e-flex e-con e-child" data-element_type="container" data-id="734e196" role="region region region">
 <div class="elementor-element elementor-element-ad08d92 elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-id="ad08d92" data-widget_type="image.default">
 <div class="elementor-widget-container">
-<img alt="Interactive Online Learning" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/> </div>
+<div class="talvion-facility-media-wrap">
+<img alt="Practical Work" class="attachment-full size-full wp-image-1099" decoding="async" height="768" loading="lazy" sizes="(max-width: 303px) 100vw, 303px" src="wp-content/uploads/2023/11/talvion-facility-library.png" srcset="wp-content/uploads/2023/11/talvion-facility-library.png 1536w" width="1536"/>
+<div class="talvion-facility-badge">
+<span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6M12 19h8"/></svg></span>
+<span class="facility-badge-title">Practical Work</span>
 </div>
-<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><img alt="Multi-Device Access" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/></div></div></div>
+</div>
+</div>
+</div>
+<div class="elementor-element talvion-facility-third elementor-widget__width-initial elementor-widget elementor-widget-image" data-element_type="widget" data-widget_type="image.default"><div class="elementor-widget-container"><div class="talvion-facility-media-wrap"><img alt="Online Classes" class="attachment-full size-full" decoding="async" height="768" loading="lazy" src="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png" srcset="wp-content/uploads/2023/11/talvion-facility-advanced-labs.png 1536w" width="1536"/><div class="talvion-facility-badge"><span class="facility-badge-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></span><span class="facility-badge-title">Online Classes</span></div></div></div></div></div>
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282 e-n-tab-content-1283" class="elementor-element elementor-element-2dff629 e-flex e-con-boxed e-con e-child" data-element_type="container" data-id="2dff629" role="region region region">
 <div class="e-con-inner">
 <div aria-labelledby="e-n-tab-content-1281 e-n-tab-content-1282 e-n-tab-content-1283" class="elementor-element elementor-element-6b6f5f5 e-con-full e-flex e-con e-child" data-element_type="container" data-id="6b6f5f5" role="region region region">
@@ -7007,6 +7388,76 @@ window._nslDOMReady(function () {
     document.addEventListener('DOMContentLoaded', initStudentsParallax);
   } else {
     initStudentsParallax();
+  }
+})();
+</script>
+
+<script id="talvion-offcanvas-toggle-script">
+(function() {
+  function initMobileDrawer() {
+    // Open drawer
+    document.addEventListener('click', function(e) {
+      var trigger = e.target.closest('.jws-offcanvas-trigger');
+      if (trigger) {
+        e.preventDefault();
+        var offcanvas = document.getElementById('2b5392e-overlay') || document.querySelector('.jws-offcanvas-parent-wrapper');
+        if (offcanvas) {
+          offcanvas.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+        return;
+      }
+
+      // Close drawer button or overlay
+      var closeBtn = e.target.closest('.jws-offcanvas-close') || e.target.closest('.jws-offcanvas-overlay') || e.target.closest('.talvion-drawer-close');
+      if (closeBtn) {
+        e.preventDefault();
+        var offcanvas = document.getElementById('2b5392e-overlay') || document.querySelector('.jws-offcanvas-parent-wrapper');
+        if (offcanvas) {
+          offcanvas.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+        return;
+      }
+
+      // Accordion toggle button in mobile menu
+      var accBtn = e.target.closest('.talvion-accordion-btn');
+      if (accBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parentLi = accBtn.closest('.has-sub-accordion');
+        if (parentLi) {
+          parentLi.classList.toggle('expanded');
+        }
+        return;
+      }
+
+      // If user clicks a direct nav link inside drawer
+      var navLink = e.target.closest('.talvion-nav-link') || e.target.closest('.talvion-sub-menu a') || e.target.closest('.talvion-drawer-apply-btn');
+      if (navLink && !e.target.closest('.talvion-accordion-btn')) {
+        var offcanvas = document.getElementById('2b5392e-overlay') || document.querySelector('.jws-offcanvas-parent-wrapper');
+        if (offcanvas) {
+          offcanvas.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var offcanvas = document.getElementById('2b5392e-overlay') || document.querySelector('.jws-offcanvas-parent-wrapper');
+        if (offcanvas && offcanvas.classList.contains('active')) {
+          offcanvas.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileDrawer);
+  } else {
+    initMobileDrawer();
   }
 })();
 </script>
