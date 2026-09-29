@@ -1,3 +1,806 @@
 
 <!-- saved from url=(0011)about:blank -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body></body></html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="talvion-mobile-fixed-nav-styles">
+/* ========================================================
+   TALVION: Permanently Fixed Mobile Navigation & Modern Drawer
+   ======================================================== */
+
+@media (max-width: 1024px) {
+  /* Permanently lock header at top in ALL sections */
+  html body header.site-header,
+  html body #masthead {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    max-height: 60px !important;
+    z-index: 999999 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 2px 14px rgba(3, 15, 64, 0.08) !important;
+    margin: 0 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Prevent page content from hiding behind fixed header */
+  html body {
+    padding-top: 60px !important;
+  }
+
+  /* Prevent theme scripts from hiding or translating header */
+  html body .site-header .site-branding-container,
+  html body .site-header .jws_header,
+  html body .site-header .cafe-sticky-row-container,
+  html body .site-header .elementor-element-44c7c84 {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+  }
+
+  html body .site-header .is-sticky.no-active-sticky,
+  html body .site-header .no-active-sticky,
+  html body .site-header .cafe-scroll-up-sticky.no-active-sticky,
+  html body .site-header .elementor-element-44c7c84.no-active-sticky,
+  html body .site-header .cafe-row-sticky.no-active-sticky,
+  html body .site-header .is-sticky,
+  html body .site-header .cafe-row-sticky {
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Header flex row */
+  html body .site-header .elementor-element-44c7c84 > .e-con-inner,
+  html body .site-header .elementor-element-44c7c84 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 16px !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    max-height: 60px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .site-header .elementor-element-8e08b80 {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  html body .site-header .elementor-widget-jws_logo .elementor-logo img,
+  html body .site-header .logo-image {
+    max-height: 38px !important;
+    width: auto !important;
+    display: block !important;
+  }
+
+  /* Hide desktop menu items completely on mobile */
+  html body .site-header .elementor-element-5c47232,
+  html body .site-header .jws_main_menu,
+  html body .site-header ul.nav {
+    display: none !important;
+  }
+
+  /* Right navigation container containing Apply Now and Hamburger */
+  html body .site-header .elementor-element-684a267 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  html body .site-header .elementor-element-d9c1f26 {
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  /* Apply Now Button */
+  html body .site-header .elementor-element-d9c1f26 .btn,
+  html body .site-header .jws_account_button a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #030f40 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    padding: 8px 18px !important;
+    font-size: 13.5px !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(3, 15, 64, 0.16) !important;
+    border: none !important;
+    white-space: nowrap !important;
+    transition: all 0.2s ease !important;
+  }
+
+  html body .site-header .elementor-element-d9c1f26 .btn:hover,
+  html body .site-header .jws_account_button a:hover {
+    background-color: #543cdf !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+  }
+
+  html body .site-header .elementor-element-d9c1f26 .btn span,
+  html body .site-header .jws_account_button a span,
+  html body .site-header .jws_account_text {
+    color: #ffffff !important;
+  }
+
+  /* Hamburger menu button [ ☰ ] */
+  html body .site-header .elementor-element-2b5392e,
+  html body .site-header .jws-offcanvas-action-wrap {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
+  html body .site-header .jws-offcanvas-trigger {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 8px !important;
+    background: #f4f5f9 !important;
+    color: #030f40 !important;
+    font-size: 19px !important;
+    text-decoration: none !important;
+    border: 1px solid #e5e8ee !important;
+    cursor: pointer !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.2s ease !important;
+    padding: 0 !important;
+  }
+
+  html body .site-header .jws-offcanvas-trigger:hover,
+  html body .site-header .jws-offcanvas-trigger:active {
+    background: #543cdf !important;
+    color: #ffffff !important;
+    border-color: #543cdf !important;
+  }
+}
+
+/* ========================================================
+   TALVION: Mobile Drawer Full CSS & Robust Active States
+   ======================================================== */
+.jws-offcanvas-parent-wrapper .jws-offcanvas-overlay,
+.jws-offcanvas-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(3, 15, 64, 0.65) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  z-index: 9999998 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas-overlay,
+[id$="-overlay"].active .jws-offcanvas-overlay,
+.jws-offcanvas-overlay.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.jws-offcanvas,
+.jws-offcanvas.position-at-left,
+.jws-offcanvas-parent-wrapper .jws-offcanvas,
+.talvion-mobile-drawer-wrap {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 320px !important;
+  max-width: 85vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background: #ffffff !important;
+  z-index: 9999999 !important;
+  transform: translateX(-100%) !important;
+  transform: translate3d(-100%, 0, 0) !important;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.32s !important;
+  box-shadow: 10px 0 35px rgba(3, 15, 64, 0.22) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  visibility: hidden !important;
+}
+
+.jws-offcanvas.active,
+.jws-offcanvas.jws-offcanvas-show,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas .jws-offcanvas-content-data,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas.position-at-left,
+[id$="-overlay"].active .jws-offcanvas {
+  transform: translateX(0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 320px !important;
+  max-width: 85vw !important;
+}
+
+.jws-offcanvas .jws-offcanvas-content {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.jws-offcanvas-text.talvion-mobile-drawer {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  background: #ffffff !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Drawer Header */
+.talvion-drawer-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 16px 20px !important;
+  border-bottom: 1px solid #edf0f5 !important;
+  background: #ffffff !important;
+}
+
+.talvion-drawer-logo img {
+  display: block !important;
+}
+
+.talvion-drawer-close {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 8px !important;
+  background: #f1f4f9 !important;
+  border: none !important;
+  color: #030f40 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-drawer-close:hover {
+  background: #030f40 !important;
+  color: #ffffff !important;
+}
+
+/* Drawer Search */
+.talvion-drawer-search {
+  padding: 16px 20px 8px 20px !important;
+  background: #ffffff !important;
+}
+
+.talvion-search-form {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.talvion-search-form input {
+  width: 100% !important;
+  height: 42px !important;
+  padding: 8px 40px 8px 14px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  font-size: 13.5px !important;
+  color: #1e293b !important;
+  background: #f8fafc !important;
+  outline: none !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.talvion-search-form input:focus {
+  border-color: #543cdf !important;
+  background: #ffffff !important;
+}
+
+.talvion-search-form button {
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: transparent !important;
+  border: none !important;
+  color: #64748b !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Drawer Navigation List */
+.talvion-drawer-nav {
+  flex: 1 1 auto !important;
+  padding: 12px 14px !important;
+  overflow-y: auto !important;
+}
+
+.talvion-mobile-menu {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.talvion-mobile-menu > li {
+  margin-bottom: 2px !important;
+}
+
+.talvion-nav-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 11px 14px !important;
+  color: #030f40 !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-nav-link:hover {
+  background: #f4f6fa !important;
+  color: #543cdf !important;
+}
+
+.talvion-nav-link .nav-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #543cdf !important;
+  opacity: 0.85 !important;
+}
+
+/* Accordion Row */
+.talvion-nav-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.talvion-nav-row .talvion-nav-link {
+  flex: 1 !important;
+}
+
+.talvion-accordion-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #64748b !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: transform 0.25s ease !important;
+}
+
+.has-sub-accordion.expanded .talvion-accordion-btn {
+  transform: rotate(180deg) !important;
+  color: #543cdf !important;
+}
+
+.talvion-sub-menu {
+  list-style: none !important;
+  padding: 4px 0 8px 40px !important;
+  margin: 0 !important;
+  display: none !important;
+}
+
+.has-sub-accordion.expanded .talvion-sub-menu {
+  display: block !important;
+}
+
+.talvion-sub-menu li a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 10px !important;
+  color: #475569 !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-sub-menu li a:hover {
+  color: #543cdf !important;
+  background: #f8fafc !important;
+  transform: translateX(3px) !important;
+}
+
+.talvion-sub-menu .all-courses-link {
+  color: #543cdf !important;
+  font-weight: 700 !important;
+  margin-top: 4px !important;
+}
+
+/* Drawer Footer */
+.talvion-drawer-footer {
+  padding: 16px 20px 24px 20px !important;
+  border-top: 1px solid #edf0f5 !important;
+  background: #ffffff !important;
+}
+
+.talvion-drawer-apply-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  padding: 13px !important;
+  border-radius: 10px !important;
+  background: #030f40 !important;
+  color: #ffffff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(3, 15, 64, 0.22) !important;
+  transition: all 0.25s ease !important;
+}
+
+.talvion-drawer-apply-btn:hover {
+  background: #543cdf !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+.talvion-drawer-contact-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-top: 14px !important;
+}
+
+.drawer-contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+.drawer-contact-item:hover {
+  color: #543cdf !important;
+}
+</style>
+</head><body>
+<script id="talvion-offcanvas-toggle-script">
+(function() {
+  function initMobileDrawer() {
+    function setDrawer(open) {
+      var overlays = document.querySelectorAll('.jws-offcanvas-parent-wrapper, [id$="-overlay"]');
+      overlays.forEach(function(el) {
+        if (open) {
+          el.classList.add('active');
+          var drawer = el.querySelector('.jws-offcanvas');
+          if (drawer) drawer.classList.add('active', 'jws-offcanvas-show');
+        } else {
+          el.classList.remove('active');
+          var drawer = el.querySelector('.jws-offcanvas');
+          if (drawer) drawer.classList.remove('active', 'jws-offcanvas-show');
+        }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    // Direct event binding on all trigger links and buttons
+    var triggers = document.querySelectorAll('.jws-offcanvas-trigger, [data-offcanvas="2b5392e"], .jws-elementor-button');
+    triggers.forEach(function(t) {
+      t.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(true);
+      };
+    });
+
+    // Direct event binding on drawer close buttons
+    var closeButtons = document.querySelectorAll('.jws-offcanvas-close, .talvion-drawer-close');
+    closeButtons.forEach(function(b) {
+      b.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(false);
+      };
+    });
+
+    // Direct event binding on accordion toggles
+    var accordionButtons = document.querySelectorAll('.talvion-accordion-btn');
+    accordionButtons.forEach(function(b) {
+      b.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parentLi = b.closest('.has-sub-accordion');
+        if (parentLi) {
+          parentLi.classList.toggle('expanded');
+        }
+      };
+    });
+
+    // Global click delegation
+    document.addEventListener('click', function(e) {
+      // 1. Hamburger button click
+      var trigger = e.target.closest('.jws-offcanvas-trigger') || e.target.closest('a[data-offcanvas]');
+      if (trigger) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(true);
+        return;
+      }
+
+      // 2. Close button or overlay
+      var closeBtn = e.target.closest('.jws-offcanvas-close') || e.target.closest('.talvion-drawer-close') || e.target.closest('.jws-offcanvas-overlay');
+      if (closeBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(false);
+        return;
+      }
+
+      // 3. Accordion toggle
+      var accBtn = e.target.closest('.talvion-accordion-btn');
+      if (accBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parentLi = accBtn.closest('.has-sub-accordion');
+        if (parentLi) {
+          parentLi.classList.toggle('expanded');
+        }
+        return;
+      }
+
+      // 4. Click nav link inside drawer
+      var navLink = e.target.closest('.talvion-nav-link') || e.target.closest('.talvion-sub-menu a') || e.target.closest('.talvion-drawer-apply-btn');
+      if (navLink && !e.target.closest('.talvion-accordion-btn')) {
+        setDrawer(false);
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        setDrawer(false);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileDrawer);
+  } else {
+    initMobileDrawer();
+  }
+  window.addEventListener('load', initMobileDrawer);
+})();
+</script>
+
+<!-- ========================================================= -->
+<!-- TALVION: FIXED FLOATING CALL & WHATSAPP QUICK ACTION BUTTONS -->
+<!-- ========================================================= -->
+<div class="talvion-floating-actions" id="talvion-floating-actions" aria-label="Quick Contact Actions">
+  <!-- Call Button -->
+  <a href="tel:+917056537040" class="talvion-float-btn talvion-float-call" aria-label="Call Talvion at +917056537040">
+    <span class="talvion-float-tooltip">Call: +91 70565 37040</span>
+    <div class="talvion-float-icon">
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917056537040" target="_blank" rel="noopener noreferrer" class="talvion-float-btn talvion-float-whatsapp" aria-label="Chat with Talvion on WhatsApp">
+    <span class="talvion-float-tooltip">Chat on WhatsApp</span>
+    <div class="talvion-float-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+</div>
+
+<style id="talvion-floating-actions-styles">
+/* ========================================================
+   TALVION: Permanently Fixed Floating Call & WhatsApp Buttons
+   ======================================================== */
+.talvion-floating-actions {
+  position: fixed !important;
+  right: 22px !important;
+  bottom: 85px !important;
+  z-index: 999990 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  align-items: flex-end !important;
+  pointer-events: none !important;
+}
+
+.talvion-float-btn {
+  pointer-events: auto !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease !important;
+  will-change: transform !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.talvion-float-btn:hover {
+  transform: scale(1.1) translateY(-2px) !important;
+}
+
+.talvion-float-btn:active {
+  transform: scale(0.95) !important;
+}
+
+/* Call Button */
+.talvion-float-call {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  animation: talvionPulseBlue 3s infinite ease-in-out !important;
+}
+
+.talvion-float-call:hover {
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.6) !important;
+}
+
+/* WhatsApp Button */
+.talvion-float-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  animation: talvionPulseGreen 3s infinite ease-in-out !important;
+  animation-delay: 1.5s !important;
+}
+
+.talvion-float-whatsapp:hover {
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.6) !important;
+}
+
+.talvion-float-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.talvion-float-icon svg {
+  display: block !important;
+  transition: transform 0.25s ease !important;
+}
+
+.talvion-float-btn:hover .talvion-float-icon svg {
+  transform: scale(1.08) !important;
+}
+
+/* Desktop Tooltip */
+.talvion-float-tooltip {
+  position: absolute !important;
+  right: calc(100% + 12px) !important;
+  top: 50% !important;
+  transform: translateY(-50%) translateX(8px) !important;
+  background: #030f40 !important;
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 18px rgba(3, 15, 64, 0.25) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+
+.talvion-float-tooltip::after {
+  content: '' !important;
+  position: absolute !important;
+  right: -5px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  border-width: 5px 0 5px 6px !important;
+  border-style: solid !important;
+  border-color: transparent transparent transparent #030f40 !important;
+}
+
+.talvion-float-btn:hover .talvion-float-tooltip {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-50%) translateX(0) !important;
+}
+
+/* Pulse Animations */
+@keyframes talvionPulseBlue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.6), 0 8px 24px rgba(14, 165, 233, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(14, 165, 233, 0), 0 8px 24px rgba(14, 165, 233, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0), 0 8px 24px rgba(14, 165, 233, 0.45);
+  }
+}
+
+@keyframes talvionPulseGreen {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 8px 24px rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0), 0 8px 24px rgba(37, 211, 102, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 8px 24px rgba(37, 211, 102, 0.45);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .talvion-floating-actions {
+    right: 16px !important;
+    bottom: 78px !important;
+    gap: 10px !important;
+  }
+  .talvion-float-btn {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .talvion-float-tooltip {
+    display: none !important;
+  }
+}
+</style>
+</body></html>

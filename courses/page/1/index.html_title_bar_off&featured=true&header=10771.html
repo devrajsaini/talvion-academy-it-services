@@ -60,7 +60,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='e-animations-css' href='../../../wp-content/plugins/elementor/assets/lib/animations/animations.min.css%3Fver=3.25.4.css' media='all' />
 <link rel='stylesheet' id='jws-style-css' href='../../../wp-content/uploads/jws-style.css%3Fver=1770252057.css' media='all' />
 <link rel='stylesheet' id='font-awesome-pro-css' href='../../../wp-content/themes/masterlife/assets/font/awesome/awesome.css%3Fver=3d7a796dfbcf16eed579c7d9d203d0a5.css' media='all' />
-<link rel='stylesheet' id='jws-jwsicon-css' href='../../../wp-content/themes/masterlife/assets/font/jws_icon/jwsicon.css%3Fver=1.0.0.css' media='all' />
+<link data-minify="1" href="https://masterlife.jwsuperthemes.com/wp-content/cache/min/1/wp-content/themes/masterlife/assets/font/jws_icon/jwsicon.css?ver=1788218998" id="jws-jwsicon-css" media="all" rel="stylesheet"/>
 <link rel='stylesheet' id='mona-sans-css' href='../../../wp-content/themes/masterlife/assets/font/mona-sans/stylesheet.css%3Fver=1.0.0.css' media='all' />
 <link rel='stylesheet' id='owl-carousel-css' href='../../../wp-content/themes/masterlife/assets/css/owl.carousel.css%3Fver=1.0.0.css' media='all' />
 <link rel='stylesheet' id='jws-style-theme-css' href='../../../wp-content/themes/masterlife/style.css%3Fver=3d7a796dfbcf16eed579c7d9d203d0a5.css' media='all' />
@@ -755,6 +755,515 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 <link rel='stylesheet' id='e-swiper-css' href='../../../wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css%3Fver=3.25.4.css' media='all' />
 
   <style id="talvion-hide-mobile-toolbar">.jws-toolbar-wap { display: none !important; visibility: hidden !important; height: 0 !important; overflow: hidden !important; pointer-events: none !important; }</style>
+<style id="talvion-mobile-fixed-nav-styles">
+/* ========================================================
+   TALVION: Permanently Fixed Mobile Navigation & Modern Drawer
+   ======================================================== */
+
+@media (max-width: 1024px) {
+  /* Permanently lock header at top in ALL sections */
+  html body header.site-header,
+  html body #masthead {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    max-height: 60px !important;
+    z-index: 999999 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 2px 14px rgba(3, 15, 64, 0.08) !important;
+    margin: 0 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Prevent page content from hiding behind fixed header */
+  html body {
+    padding-top: 60px !important;
+  }
+
+  /* Prevent theme scripts from hiding or translating header */
+  html body .site-header .site-branding-container,
+  html body .site-header .jws_header,
+  html body .site-header .cafe-sticky-row-container,
+  html body .site-header .elementor-element-44c7c84 {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+  }
+
+  html body .site-header .is-sticky.no-active-sticky,
+  html body .site-header .no-active-sticky,
+  html body .site-header .cafe-scroll-up-sticky.no-active-sticky,
+  html body .site-header .elementor-element-44c7c84.no-active-sticky,
+  html body .site-header .cafe-row-sticky.no-active-sticky,
+  html body .site-header .is-sticky,
+  html body .site-header .cafe-row-sticky {
+    transform: none !important;
+    -webkit-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Header flex row */
+  html body .site-header .elementor-element-44c7c84 > .e-con-inner,
+  html body .site-header .elementor-element-44c7c84 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 16px !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    max-height: 60px !important;
+    box-sizing: border-box !important;
+  }
+
+  html body .site-header .elementor-element-8e08b80 {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  html body .site-header .elementor-widget-jws_logo .elementor-logo img,
+  html body .site-header .logo-image {
+    max-height: 38px !important;
+    width: auto !important;
+    display: block !important;
+  }
+
+  /* Hide desktop menu items completely on mobile */
+  html body .site-header .elementor-element-5c47232,
+  html body .site-header .jws_main_menu,
+  html body .site-header ul.nav {
+    display: none !important;
+  }
+
+  /* Right navigation container containing Apply Now and Hamburger */
+  html body .site-header .elementor-element-684a267 {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+  }
+
+  html body .site-header .elementor-element-d9c1f26 {
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  /* Apply Now Button */
+  html body .site-header .elementor-element-d9c1f26 .btn,
+  html body .site-header .jws_account_button a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #030f40 !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    padding: 8px 18px !important;
+    font-size: 13.5px !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 8px rgba(3, 15, 64, 0.16) !important;
+    border: none !important;
+    white-space: nowrap !important;
+    transition: all 0.2s ease !important;
+  }
+
+  html body .site-header .elementor-element-d9c1f26 .btn:hover,
+  html body .site-header .jws_account_button a:hover {
+    background-color: #543cdf !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+  }
+
+  html body .site-header .elementor-element-d9c1f26 .btn span,
+  html body .site-header .jws_account_button a span,
+  html body .site-header .jws_account_text {
+    color: #ffffff !important;
+  }
+
+  /* Hamburger menu button [ ☰ ] */
+  html body .site-header .elementor-element-2b5392e,
+  html body .site-header .jws-offcanvas-action-wrap {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+
+  html body .site-header .jws-offcanvas-trigger {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 8px !important;
+    background: #f4f5f9 !important;
+    color: #030f40 !important;
+    font-size: 19px !important;
+    text-decoration: none !important;
+    border: 1px solid #e5e8ee !important;
+    cursor: pointer !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.2s ease !important;
+    padding: 0 !important;
+  }
+
+  html body .site-header .jws-offcanvas-trigger:hover,
+  html body .site-header .jws-offcanvas-trigger:active {
+    background: #543cdf !important;
+    color: #ffffff !important;
+    border-color: #543cdf !important;
+  }
+}
+
+/* ========================================================
+   TALVION: Mobile Drawer Full CSS & Robust Active States
+   ======================================================== */
+.jws-offcanvas-parent-wrapper .jws-offcanvas-overlay,
+.jws-offcanvas-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(3, 15, 64, 0.65) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  z-index: 9999998 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas-overlay,
+[id$="-overlay"].active .jws-offcanvas-overlay,
+.jws-offcanvas-overlay.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.jws-offcanvas,
+.jws-offcanvas.position-at-left,
+.jws-offcanvas-parent-wrapper .jws-offcanvas,
+.talvion-mobile-drawer-wrap {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 320px !important;
+  max-width: 85vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  background: #ffffff !important;
+  z-index: 9999999 !important;
+  transform: translateX(-100%) !important;
+  transform: translate3d(-100%, 0, 0) !important;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.32s !important;
+  box-shadow: 10px 0 35px rgba(3, 15, 64, 0.22) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  visibility: hidden !important;
+}
+
+.jws-offcanvas.active,
+.jws-offcanvas.jws-offcanvas-show,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas .jws-offcanvas-content-data,
+.jws-offcanvas-parent-wrapper.active .jws-offcanvas.position-at-left,
+[id$="-overlay"].active .jws-offcanvas {
+  transform: translateX(0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 320px !important;
+  max-width: 85vw !important;
+}
+
+.jws-offcanvas .jws-offcanvas-content {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.jws-offcanvas-text.talvion-mobile-drawer {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+  background: #ffffff !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Drawer Header */
+.talvion-drawer-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 16px 20px !important;
+  border-bottom: 1px solid #edf0f5 !important;
+  background: #ffffff !important;
+}
+
+.talvion-drawer-logo img {
+  display: block !important;
+}
+
+.talvion-drawer-close {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 8px !important;
+  background: #f1f4f9 !important;
+  border: none !important;
+  color: #030f40 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-drawer-close:hover {
+  background: #030f40 !important;
+  color: #ffffff !important;
+}
+
+/* Drawer Search */
+.talvion-drawer-search {
+  padding: 16px 20px 8px 20px !important;
+  background: #ffffff !important;
+}
+
+.talvion-search-form {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.talvion-search-form input {
+  width: 100% !important;
+  height: 42px !important;
+  padding: 8px 40px 8px 14px !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  font-size: 13.5px !important;
+  color: #1e293b !important;
+  background: #f8fafc !important;
+  outline: none !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.talvion-search-form input:focus {
+  border-color: #543cdf !important;
+  background: #ffffff !important;
+}
+
+.talvion-search-form button {
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: transparent !important;
+  border: none !important;
+  color: #64748b !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Drawer Navigation List */
+.talvion-drawer-nav {
+  flex: 1 1 auto !important;
+  padding: 12px 14px !important;
+  overflow-y: auto !important;
+}
+
+.talvion-mobile-menu {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.talvion-mobile-menu > li {
+  margin-bottom: 2px !important;
+}
+
+.talvion-nav-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 11px 14px !important;
+  color: #030f40 !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-nav-link:hover {
+  background: #f4f6fa !important;
+  color: #543cdf !important;
+}
+
+.talvion-nav-link .nav-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #543cdf !important;
+  opacity: 0.85 !important;
+}
+
+/* Accordion Row */
+.talvion-nav-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.talvion-nav-row .talvion-nav-link {
+  flex: 1 !important;
+}
+
+.talvion-accordion-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #64748b !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  transition: transform 0.25s ease !important;
+}
+
+.has-sub-accordion.expanded .talvion-accordion-btn {
+  transform: rotate(180deg) !important;
+  color: #543cdf !important;
+}
+
+.talvion-sub-menu {
+  list-style: none !important;
+  padding: 4px 0 8px 40px !important;
+  margin: 0 !important;
+  display: none !important;
+}
+
+.has-sub-accordion.expanded .talvion-sub-menu {
+  display: block !important;
+}
+
+.talvion-sub-menu li a {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 10px !important;
+  color: #475569 !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+}
+
+.talvion-sub-menu li a:hover {
+  color: #543cdf !important;
+  background: #f8fafc !important;
+  transform: translateX(3px) !important;
+}
+
+.talvion-sub-menu .all-courses-link {
+  color: #543cdf !important;
+  font-weight: 700 !important;
+  margin-top: 4px !important;
+}
+
+/* Drawer Footer */
+.talvion-drawer-footer {
+  padding: 16px 20px 24px 20px !important;
+  border-top: 1px solid #edf0f5 !important;
+  background: #ffffff !important;
+}
+
+.talvion-drawer-apply-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  width: 100% !important;
+  padding: 13px !important;
+  border-radius: 10px !important;
+  background: #030f40 !important;
+  color: #ffffff !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 14px rgba(3, 15, 64, 0.22) !important;
+  transition: all 0.25s ease !important;
+}
+
+.talvion-drawer-apply-btn:hover {
+  background: #543cdf !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}
+
+.talvion-drawer-contact-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-top: 14px !important;
+}
+
+.drawer-contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: #64748b !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+.drawer-contact-item:hover {
+  color: #543cdf !important;
+}
+</style>
 </head>
 <body data-rsssl=1 class="archive post-type-archive post-type-archive-sfwd-courses wp-embed-responsive wp-theme-masterlife theme-masterlife woocommerce-no-js ld-dashboard button-default user-not-logged-in has-tool-bar single-product-default container-box  jws_demo_mode elementor-default elementor-kit-15 learndash-cpt learndash-cpt-sfwd-courses learndash-template-ld30 learndash-embed-responsive">
 
@@ -3036,436 +3545,237 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
 	</div><!-- #primary -->  
 
 	</div><!-- #content -->
-                	<style id="talvion-cta-students-parallax-style">
-/* CTA Students Banner Section */
-.jws-toolbar-wap {
-  display: none !important;
-}
-
-.talvion-cta-students-section {
-  position: relative;
-  z-index: 20;
-  width: 100%;
-  margin-top: 40px;
-  margin-bottom: -150px;
-  overflow: visible !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-}
-
-.talvion-cta-students-section .e-con-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
-  overflow: visible !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-b0e538c {
-  position: relative;
-  width: 100%;
-  padding-top: 90px;
-  padding-bottom: 0px;
-  overflow: visible !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-3872b62 {
-  background-color: #543cdf !important;
-  border-radius: 30px !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: stretch !important;
-  justify-content: space-between !important;
-  padding: 0 40px 0 70px !important;
-  position: relative !important;
-  overflow: visible !important;
-  box-shadow: 0 20px 50px rgba(84, 60, 223, 0.28) !important;
-}
-
-/* Left content */
-.elementor-6872 .elementor-element.elementor-element-fcbddd8 {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  padding: 50px 0 !important;
-  max-width: 500px !important;
-  z-index: 5 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-fcbddd8 * {
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-23077b6 .ld-fh-element {
-  color: #FFFFFF !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  letter-spacing: 2px !important;
-  text-transform: uppercase !important;
-  margin-bottom: 14px !important;
-  display: inline-block !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-adda027 .elementor-heading-title {
-  color: #FFFFFF !important;
-  font-size: clamp(28px, 3.4vw, 42px) !important;
-  font-weight: 800 !important;
-  line-height: 1.22 !important;
-  margin: 0 0 16px 0 !important;
-  letter-spacing: -0.5px !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-1c383a6 .ld-fh-element {
-  color: rgba(244, 247, 255, 0.85) !important;
-  font-size: 15.5px !important;
-  line-height: 1.6 !important;
-  margin-bottom: 28px !important;
-  font-weight: 400 !important;
-}
-
-.talvion-cta-btn-yellow {
-  background-color: #ffc119 !important;
-  color: #030f40 !important;
-  font-family: inherit !important;
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  padding: 14px 34px !important;
-  border-radius: 30px !important;
-  border: 1px solid #e5ac14 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-  transition: all 0.25s ease !important;
-  box-shadow: 0 8px 24px rgba(255, 193, 25, 0.35) !important;
-}
-
-.talvion-cta-btn-yellow:hover {
-  background-color: #ffd04f !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 12px 28px rgba(255, 193, 25, 0.45) !important;
-  color: #030f40 !important;
-}
-
-/* Right Students Container - always grounded at bottom */
-.elementor-6872 .elementor-element.elementor-element-30a5cb3 {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: flex-end !important;
-  justify-content: flex-end !important;
-  align-self: flex-end !important;
-  position: relative !important;
-  overflow: visible !important;
-  margin-top: -85px !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  flex: 1 1 auto !important;
-  height: 100% !important;
-}
-
-/* Ground the widget wrappers and images */
-.elementor-6872 .elementor-element.elementor-element-e9230b4,
-.elementor-6872 .elementor-element.elementor-element-0964be8 {
-  position: relative !important;
-  display: flex !important;
-  align-items: flex-end !important;
-  align-self: flex-end !important;
-  height: auto !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  line-height: 0 !important;
-  will-change: transform;
-  transition: transform 0.08s ease-out;
-}
-
-.elementor-6872 .elementor-element.elementor-element-e9230b4 .elementor-widget-container,
-.elementor-6872 .elementor-element.elementor-element-0964be8 .elementor-widget-container {
-  display: flex !important;
-  align-items: flex-end !important;
-  align-self: flex-end !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 0 !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-e9230b4 {
-  z-index: 2 !important;
-  margin-right: -60px !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-0964be8 {
-  z-index: 1 !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-e9230b4 img,
-.elementor-6872 .elementor-element.elementor-element-0964be8 img {
-  display: block !important;
-  max-width: none !important;
-  vertical-align: bottom !important;
-  margin-bottom: 0 !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-e9230b4 img {
-  height: 417px !important;
-  width: auto !important;
-}
-
-.elementor-6872 .elementor-element.elementor-element-0964be8 img {
-  height: 451px !important;
-  width: auto !important;
-}
-
-/* Medium Desktop & Tablet (768px - 1024px) */
-@media (max-width: 1024px) {
-  .elementor-6872 .elementor-element.elementor-element-3872b62 {
-    padding: 0 25px 0 45px !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-30a5cb3 {
-    margin-top: -65px !important;
-    align-items: flex-end !important;
-    align-self: flex-end !important;
-    margin-bottom: 0 !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-e9230b4 img {
-    height: 380px !important;
-    width: auto !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-0964be8 img {
-    height: 410px !important;
-    width: auto !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-e9230b4 {
-    margin-right: -45px !important;
-  }
-}
-
-/* Tablets around 820px-900px */
-@media (max-width: 900px) and (min-width: 768px) {
-  .elementor-6872 .elementor-element.elementor-element-3872b62 {
-    padding: 0 20px 0 35px !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-fcbddd8 {
-    max-width: 380px !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-e9230b4 img {
-    height: 350px !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-0964be8 img {
-    height: 375px !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-e9230b4 {
-    margin-right: -40px !important;
-  }
-}
-
-/* Mobile Devices (<= 767px) */
-@media (max-width: 767px) {
-  .talvion-cta-students-section {
-    margin-top: 40px !important;
-    margin-bottom: -50px !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-3872b62 {
-    flex-direction: column !important;
-    padding: 35px 20px 0 20px !important;
-    align-items: center !important;
-    text-align: center !important;
-    overflow: hidden !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-fcbddd8 {
-    padding: 0 0 20px 0 !important;
-    align-items: center !important;
-    text-align: center !important;
-    max-width: 100% !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-30a5cb3 {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: center !important;
-    align-items: flex-end !important;
-    align-self: center !important;
-    width: 100% !important;
-    margin-top: 10px !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    overflow: visible !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-e9230b4,
-  .elementor-6872 .elementor-element.elementor-element-0964be8 {
-    display: flex !important;
-    align-items: flex-end !important;
-    align-self: flex-end !important;
-    height: auto !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    line-height: 0 !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-e9230b4 {
-    z-index: 2 !important;
-    margin-right: -35px !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-0964be8 {
-    z-index: 1 !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-e9230b4 img {
-    height: 235px !important;
-    width: auto !important;
-    vertical-align: bottom !important;
-    display: block !important;
-    margin-bottom: 0 !important;
-  }
-  .elementor-6872 .elementor-element.elementor-element-0964be8 img {
-    height: 255px !important;
-    width: auto !important;
-    vertical-align: bottom !important;
-    display: block !important;
-    margin-bottom: 0 !important;
-  }
-}
-</style>
-
-<section class="talvion-cta-students-section" aria-label="Join Us Banner">
-  <div class="elementor elementor-6872" data-elementor-id="6872" data-elementor-type="wp-post">
-    <div class="elementor-element elementor-element-b0e538c e-flex e-con-boxed e-con e-parent" data-element_type="container" data-id="b0e538c">
-      <div class="e-con-inner">
-        <div class="elementor-element elementor-element-3872b62 e-con-full e-flex e-con e-child" data-element_type="container" data-id="3872b62">
-          
-          <!-- Left Content -->
-          <div class="elementor-element elementor-element-fcbddd8 e-con-full e-flex e-con e-child" data-element_type="container" data-id="fcbddd8">
-            <div class="elementor-element elementor-element-23077b6 elementor-widget elementor-widget-jws_advanced_heading" data-element_type="widget" data-id="23077b6">
-              <div class="elementor-widget-container">
-                <div class="ld-fancy-heading pos-rel">
-                  <div class="ld-fh-element d-inline-block pos-rel lqd-highlight-classic lqd-highlight-grow-left div">JOIN US</div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="elementor-element elementor-element-adda027 elementor-widget elementor-widget-jws_advanced_heading" data-element_type="widget" data-id="adda027">
-              <div class="elementor-widget-container">
-                <div class="ld-fancy-heading pos-rel">
-                  <h3 class="ld-fh-element d-inline-block pos-rel elementor-heading-title lqd-highlight-classic lqd-highlight-grow-left h3">Join us and achieve your goals.</h3>
-                </div>
-              </div>
-            </div>
-            
-            <div class="elementor-element elementor-element-1c383a6 elementor-widget elementor-widget-jws_advanced_heading" data-element_type="widget" data-id="1c383a6">
-              <div class="elementor-widget-container">
-                <div class="ld-fancy-heading pos-rel">
-                  <div class="ld-fh-element d-inline-block pos-rel lqd-highlight-classic lqd-highlight-grow-left div">Choose from over 210,000 online video courses with new additions published every month</div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="elementor-element elementor-element-26b1a35 elementor-widget elementor-widget-jws_button_advanced" data-element_type="widget" data-id="26b1a35">
-              <div class="elementor-widget-container">
-                <a class="btn btn-solid btn-icon-shaped btn-has-label talvion-cta-btn-yellow" href="/contact.html">
-                  <span class="btn-txt" data-text="Get started today">Get started today</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Right Students with Parallax Animation -->
-          <div class="elementor-element elementor-element-30a5cb3 e-con-full e-flex e-con e-child" data-element_type="container" data-id="30a5cb3">
-            <div class="elementor-element elementor-element-e9230b4 elementor-widget elementor-widget-image" data-element_type="widget" data-id="e9230b4">
-              <div class="elementor-widget-container">
-                <img alt="Talvion Female Student" class="attachment-full size-full wp-image-8024" height="417" loading="lazy" sizes="(max-width: 275px) 100vw, 275px" src="/course-assets/business-finance-employment-female.png" width="275"/>
-              </div>
-            </div>
-            <div class="elementor-element elementor-element-0964be8 elementor-widget elementor-widget-image" data-element_type="widget" data-id="0964be8">
-              <div class="elementor-widget-container">
-                <img alt="Talvion Male Student" class="attachment-full size-full wp-image-8023" height="451" loading="lazy" sizes="(max-width: 329px) 100vw, 329px" src="/course-assets/university-study-abroad-1.png" width="329"/>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                	<!-- ========================================================= -->
+<!-- TALVION AUTHENTIC CTA & DARK PATTERNED FOOTER              -->
+<!-- Exactly matching reference design across all pages         -->
+<!-- ========================================================= -->
 
 <!-- ========================================================= -->
-<!-- TALVION UNIVERSAL PREMIUM DARK FOOTER                     -->
+<!-- TALVION AUTHENTIC CTA & DARK PATTERNED FOOTER              -->
+<!-- Exactly matching reference design across all pages         -->
 <!-- ========================================================= -->
-<footer class="site-footer talvion-exact-footer talvion-with-cta-overlap" id="colophon">
-  <style>
-    .talvion-exact-footer {
-      background: #030712 !important;
-      color: #94a3b8 !important;
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
-      padding: 70px 0 35px 0 !important;
-      margin: 0 !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
+
+<!-- ========================================================= -->
+<!-- TALVION AUTHENTIC CTA & DARK PATTERNED FOOTER              -->
+<!-- Exactly matching reference design across all pages         -->
+<!-- ========================================================= -->
+
+<!-- ========================================================= -->
+<!-- TALVION AUTHENTIC CTA & DARK PATTERNED FOOTER              -->
+<!-- Exactly matching reference design across all pages         -->
+<!-- ========================================================= -->
+
+<!-- ========================================================= -->
+<!-- TALVION AUTHENTIC CTA & DARK PATTERNED FOOTER              -->
+<!-- Exactly matching reference design across all pages         -->
+<!-- ========================================================= -->
+
+<!-- ========================================================= -->
+<!-- TALVION AUTHENTIC CTA & DARK PATTERNED FOOTER              -->
+<!-- Exactly matching reference design across all pages         -->
+<!-- ========================================================= -->
+
+<div class="talvion-footer-wrapper">
+  <style id="talvion-authentic-footer-styles">
+    .talvion-footer-wrapper {
       position: relative !important;
-      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      width: 100% !important;
       clear: both !important;
-      z-index: 10 !important;
+      box-sizing: border-box !important;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      overflow-x: clip !important;
     }
-    .backToTop, a.backToTop {
-      display: none !important;
-      opacity: 0 !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-    .talvion-exact-footer.talvion-with-cta-overlap {
-      padding-top: 240px !important;
-    }
-    .talvion-exact-footer * {
+    .talvion-footer-wrapper * {
       box-sizing: border-box !important;
     }
-    .tal-footer-container {
+
+    /* ---- 1. CTA BANNER (VIBRANT PURPLE + PROTRUDING STUDENTS) ---- */
+    .talvion-cta-wrap {
+      max-width: 1240px !important;
+      margin: 0 auto -165px auto !important;
+      padding: 0 20px !important;
+      position: relative !important;
+      z-index: 30 !important;
+    }
+
+    .talvion-cta-card {
+      background: linear-gradient(135deg, #533bf4 0%, #462de8 100%) !important;
+      border-radius: 28px !important;
+      padding: 50px 60px 48px 60px !important;
+      box-shadow: 0 24px 60px -12px rgba(70, 45, 232, 0.42), 0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      position: relative !important;
+      overflow: visible !important;
+      min-height: 290px !important;
+    }
+
+    .talvion-cta-content {
+      max-width: 580px !important;
+      position: relative !important;
+      z-index: 5 !important;
+    }
+
+    .talvion-cta-tag {
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+      color: #ffffff !important;
+      margin-bottom: 14px !important;
+      display: inline-block !important;
+      opacity: 0.95 !important;
+    }
+
+    .talvion-cta-heading {
+      font-size: 40px !important;
+      font-weight: 800 !important;
+      line-height: 1.18 !important;
+      color: #ffffff !important;
+      margin: 0 0 14px 0 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    .talvion-cta-heading .red-dot {
+      color: #ff4d6d !important;
+      font-weight: 900 !important;
+    }
+
+    .talvion-cta-sub {
+      font-size: 15.5px !important;
+      line-height: 1.55 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+      margin: 0 0 28px 0 !important;
+      max-width: 480px !important;
+      font-weight: 400 !important;
+    }
+
+    .talvion-cta-btn {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #ffbe18 !important;
+      color: #05081c !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      padding: 13px 30px !important;
+      border-radius: 9999px !important;
+      text-decoration: none !important;
+      box-shadow: 0 8px 22px rgba(255, 190, 24, 0.38) !important;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      border: none !important;
+      cursor: pointer !important;
+    }
+
+    .talvion-cta-btn:hover {
+      background: #ffc72c !important;
+      color: #000000 !important;
+      transform: translateY(-2px) scale(1.02) !important;
+      box-shadow: 0 12px 28px rgba(255, 190, 24, 0.48) !important;
+    }
+
+    /* Students image on the right protruding over top */
+    .talvion-cta-students {
+      position: absolute !important;
+      right: 45px !important;
+      bottom: 0 !important;
+      height: calc(100% + 65px) !important;
+      display: flex !important;
+      align-items: flex-end !important;
+      pointer-events: none !important;
+      z-index: 6 !important;
+    }
+
+    .talvion-cta-students .student-female {
+      height: 100% !important;
+      max-height: 355px !important;
+      width: auto !important;
+      object-fit: contain !important;
+      margin-right: -45px !important;
+      position: relative !important;
+      z-index: 2 !important;
+      display: block !important;
+      will-change: transform !important;
+      transition: transform 0.08s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    }
+
+    .talvion-cta-students .student-male {
+      height: 105% !important;
+      max-height: 380px !important;
+      width: auto !important;
+      object-fit: contain !important;
+      position: relative !important;
+      z-index: 1 !important;
+      display: block !important;
+      will-change: transform !important;
+      transition: transform 0.08s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    }
+
+    /* ---- 2. MAIN DARK PATTERNED FOOTER ---- */
+    .talvion-dark-footer {
+      background-color: #040714 !important;
+      background-image: url("/wp-content/uploads/2024/03/Rectangle-5165.png") !important;
+      background-repeat: repeat !important;
+      background-position: center top !important;
+      color: #94a3b8 !important;
+      padding-top: 240px !important;
+      padding-bottom: 40px !important;
+      position: relative !important;
+      z-index: 10 !important;
+      width: 100% !important;
+    }
+
+    .talvion-footer-inner {
       max-width: 1240px !important;
       margin: 0 auto !important;
       padding: 0 24px !important;
-      width: 100% !important;
     }
-    
-    /* Main Grid */
-    .tal-footer-main-grid {
+
+    .talvion-footer-grid {
       display: grid !important;
-      grid-template-columns: 2.2fr 1.15fr 1.15fr 1.75fr !important;
-      gap: 40px !important;
+      grid-template-columns: 2.1fr 1.15fr 1.15fr 1.8fr !important;
+      gap: 44px !important;
       align-items: start !important;
     }
-    
-    /* Col 1: Brand & Socials */
-    .tal-col-brand .tal-brand-logo {
+
+    /* Col 1: Logo, Tagline, Real Social Buttons */
+    .tal-fcol-brand .tal-flogo {
       display: inline-block !important;
-      margin-bottom: 20px !important;
+      margin-bottom: 18px !important;
       text-decoration: none !important;
     }
-    .tal-col-brand .tal-brand-logo img {
-      height: 44px !important;
+
+    .tal-fcol-brand .tal-flogo img {
+      height: 42px !important;
+      max-height: 44px !important;
       width: auto !important;
-      max-width: 220px !important;
       display: block !important;
       object-fit: contain !important;
     }
-    .tal-col-brand .tal-brand-desc {
-      font-size: 14.5px !important;
+
+    .tal-fcol-brand .tal-ftagline {
+      font-size: 14px !important;
       line-height: 1.65 !important;
       color: #94a3b8 !important;
-      margin: 0 0 24px 0 !important;
+      margin: 0 0 22px 0 !important;
       max-width: 320px !important;
       font-weight: 400 !important;
     }
-    .tal-social-buttons {
+
+    /* 4 High-Quality Colorful Social Buttons */
+    .tal-fsocial-buttons {
       display: flex !important;
       align-items: center !important;
       gap: 12px !important;
       flex-wrap: wrap !important;
     }
-    .tal-social-btn {
+
+    .tal-fsocial-btn {
       width: 40px !important;
       height: 40px !important;
-      border-radius: 9px !important;
+      min-width: 40px !important;
+      border-radius: 10px !important;
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -3473,171 +3783,206 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
       color: #ffffff !important;
       transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease !important;
       cursor: pointer !important;
+      border: none !important;
     }
-    .tal-social-btn:hover {
-      transform: translateY(-3px) scale(1.04) !important;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45) !important;
+
+    .tal-fsocial-btn:hover {
+      transform: translateY(-3px) scale(1.06) !important;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45) !important;
       filter: brightness(1.1) !important;
     }
-    .tal-social-fb {
+
+    .tal-fsocial-fb {
       background: #1877F2 !important;
     }
-    .tal-social-ig {
+
+    .tal-fsocial-ig {
       background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
     }
-    .tal-social-yt {
+
+    .tal-fsocial-yt {
       background: #FF0000 !important;
     }
-    .tal-social-li {
+
+    .tal-fsocial-li {
       background: #0A66C2 !important;
     }
-    .tal-social-btn svg {
+
+    .tal-fsocial-btn svg {
       width: 20px !important;
       height: 20px !important;
       fill: #ffffff !important;
     }
 
-    /* Headings (COURSES, COMPANY, GET IN TOUCH) */
-    .tal-footer-heading {
-      color: #00b4d8 !important;
+    /* Headings for Columns (Cyan) */
+    .tal-fcol-title {
       font-size: 14.5px !important;
-      font-weight: 700 !important;
-      letter-spacing: 1.6px !important;
+      font-weight: 800 !important;
+      letter-spacing: 1.5px !important;
       text-transform: uppercase !important;
+      color: #00b4d8 !important;
       margin: 0 0 22px 0 !important;
       padding: 0 !important;
-      font-family: inherit !important;
     }
 
-    /* Links Lists */
-    .tal-footer-links {
+    /* Links lists */
+    .tal-flinks {
       list-style: none !important;
       padding: 0 !important;
       margin: 0 !important;
       display: flex !important;
       flex-direction: column !important;
-      gap: 13px !important;
+      gap: 12px !important;
     }
-    .tal-footer-links li {
+
+    .tal-flinks li {
+      list-style: none !important;
       margin: 0 !important;
       padding: 0 !important;
     }
-    .tal-footer-links a {
-      color: #cbd5e1 !important;
+
+    .tal-flinks a {
+      color: #94a3b8 !important;
       font-size: 14.5px !important;
       font-weight: 500 !important;
       text-decoration: none !important;
       display: inline-block !important;
-      transition: color 0.2s ease, transform 0.2s ease !important;
+      transition: all 0.2s ease !important;
       line-height: 1.4 !important;
     }
-    .tal-footer-links a:hover {
-      color: #38bdf8 !important;
+
+    .tal-flinks a:hover {
+      color: #ffbe18 !important;
       transform: translateX(4px) !important;
     }
 
-    /* Col 4: Get in touch items */
-    .tal-contact-list {
+    /* Col 4: GET IN TOUCH */
+    .tal-fcol-title.tal-fcol-touch {
+      color: #00b4d8 !important;
+      font-size: 15px !important;
+      font-weight: 800 !important;
+      letter-spacing: 1.5px !important;
+      text-transform: uppercase !important;
+      margin-bottom: 22px !important;
+    }
+
+    .tal-fcontact-list {
       display: flex !important;
       flex-direction: column !important;
       gap: 16px !important;
+      margin-bottom: 22px !important;
     }
-    .tal-contact-row {
+
+    .tal-fcontact-row {
       display: flex !important;
       align-items: center !important;
-      gap: 15px !important;
+      gap: 16px !important;
       text-decoration: none !important;
       transition: transform 0.2s ease !important;
     }
-    .tal-contact-row:hover {
-      transform: translateX(3px) !important;
+
+    .tal-fcontact-row:hover {
+      transform: translateX(4px) !important;
     }
-    .tal-contact-badge {
+
+    .tal-fcontact-badge {
       width: 44px !important;
       height: 44px !important;
+      min-width: 44px !important;
       border-radius: 50% !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
+      color: #ffffff !important;
       flex-shrink: 0 !important;
       transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     }
-    .tal-contact-row:hover .tal-contact-badge {
-      transform: scale(1.08) !important;
+
+    .tal-fcontact-row:hover .tal-fcontact-badge {
+      transform: scale(1.1) !important;
     }
-    .tal-badge-phone {
-      background: linear-gradient(135deg, #0284c7 0%, #00b4d8 100%) !important;
-      box-shadow: 0 0 16px rgba(0, 180, 216, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+
+    .tal-fbadge-phone {
+      background: #0ea5e9 !important;
+      box-shadow: 0 0 18px rgba(14, 165, 233, 0.55), 0 0 32px rgba(14, 165, 233, 0.25) !important;
     }
-    .tal-badge-whatsapp {
-      background: linear-gradient(135deg, #10b981 0%, #25d366 100%) !important;
-      box-shadow: 0 0 16px rgba(37, 211, 102, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+
+    .tal-fbadge-whatsapp {
+      background: #22c55e !important;
+      box-shadow: 0 0 18px rgba(34, 197, 94, 0.55), 0 0 32px rgba(34, 197, 94, 0.25) !important;
     }
-    .tal-badge-email {
-      background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%) !important;
-      box-shadow: 0 0 16px rgba(244, 63, 94, 0.55), inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
+
+    .tal-fbadge-email {
+      background: #f43f5e !important;
+      box-shadow: 0 0 18px rgba(244, 63, 94, 0.55), 0 0 32px rgba(244, 63, 94, 0.25) !important;
     }
-    .tal-contact-badge svg {
+
+    .tal-fcontact-badge svg {
       width: 20px !important;
       height: 20px !important;
       fill: #ffffff !important;
     }
-    .tal-contact-text {
+
+    .tal-fcontact-text {
       color: #ffffff !important;
-      font-size: 15px !important;
+      font-size: 15.5px !important;
       font-weight: 700 !important;
       letter-spacing: 0.2px !important;
       transition: color 0.2s ease !important;
       white-space: nowrap !important;
     }
-    .tal-contact-row:hover .tal-contact-text {
+
+    .tal-fcontact-row:hover .tal-fcontact-text {
       color: #38bdf8 !important;
     }
 
-    /* Bottom Copyright & Branding Bar */
-    .tal-footer-bottom {
+    /* ---- 3. BOTTOM COPYRIGHT & MOTTO BAR ---- */
+    .tal-fbottom-bar {
       border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-      margin-top: 55px !important;
-      padding-top: 26px !important;
+      margin-top: 50px !important;
+      padding-top: 24px !important;
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
       flex-wrap: wrap !important;
       gap: 16px !important;
-      position: relative !important;
+      font-size: 14px !important;
     }
-    .tal-footer-copy {
+
+    .tal-fcopyright {
       color: #64748b !important;
       font-size: 14px !important;
       font-weight: 400 !important;
-      margin: 0 !important;
     }
-    .tal-footer-motto-wrap {
-      display: flex !important;
-      align-items: center !important;
-      gap: 18px !important;
-    }
-    .tal-footer-motto {
+
+    .tal-fmotto-wrap {
       display: inline-flex !important;
       align-items: center !important;
-      gap: 10px !important;
+      gap: 16px !important;
+    }
+
+    .tal-fmotto {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 9px !important;
       color: #00b4d8 !important;
       font-size: 14px !important;
       font-weight: 500 !important;
       text-decoration: none !important;
     }
-    .tal-footer-motto svg {
+
+    .tal-fmotto svg {
       width: 17px !important;
       height: 17px !important;
       color: #00b4d8 !important;
       stroke: #00b4d8 !important;
+      fill: none !important;
       flex-shrink: 0 !important;
     }
 
-    /* Back to Top Floating / Corner Button */
-    .tal-back-to-top {
-      width: 44px !important;
-      height: 44px !important;
+    .tal-fbottom-top-btn {
+      width: 42px !important;
+      height: 42px !important;
       border-radius: 50% !important;
       background: #ffffff !important;
       color: #0f172a !important;
@@ -3648,334 +3993,320 @@ div.nsl-container-grid[data-align="space-between"] .nsl-container-buttons {
       align-items: center !important;
       justify-content: center !important;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease !important;
       text-decoration: none !important;
       flex-shrink: 0 !important;
     }
-    .tal-back-to-top:hover {
-      transform: translateY(-3px) scale(1.05) !important;
-      background: #f8fafc !important;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+
+    .tal-fbottom-top-btn:hover {
+      transform: translateY(-3px) scale(1.08) !important;
+      background: #00b4d8 !important;
+      color: #ffffff !important;
+      box-shadow: 0 6px 20px rgba(0, 180, 216, 0.45) !important;
     }
-    .tal-back-to-top svg {
+
+    .tal-fbottom-top-btn svg {
       width: 18px !important;
       height: 18px !important;
+      stroke: currentColor !important;
       fill: none !important;
-      stroke: #0f172a !important;
       stroke-width: 2.5 !important;
       stroke-linecap: round !important;
       stroke-linejoin: round !important;
     }
 
-    /* ========================================================
-       RESPONSIVE BREAKPOINTS: DESKTOP, TABLET, MOBILE
-       ======================================================== */
-       
-    /* 1. Medium Desktops & Large Tablets (901px - 1100px) */
-    @media (max-width: 1100px) and (min-width: 901px) {
-      .talvion-exact-footer.talvion-with-cta-overlap {
-        padding-top: 210px !important;
-      }
-      .tal-footer-main-grid {
-        grid-template-columns: 1.8fr 1fr 1fr 1.6fr !important;
-        gap: 28px !important;
-      }
-      .tal-col-brand .tal-brand-desc {
-        max-width: 280px !important;
-      }
+    /* Hide any duplicate floating scroll buttons */
+    .talvion-back-to-top, .backToTop, a.backToTop, #jws-scroll-top {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
     }
 
-    /* 2. Tablets (601px - 900px) - Balanced 2x2 Grid */
-    @media (max-width: 900px) and (min-width: 601px) {
-      .talvion-exact-footer {
-        padding: 55px 0 32px 0 !important;
+    /* ---- 5. RESPONSIVE BREAKPOINTS ---- */
+    @media (max-width: 1080px) {
+      .talvion-cta-students {
+        right: 20px !important;
       }
-      .talvion-exact-footer.talvion-with-cta-overlap {
-        padding-top: 170px !important;
+      .talvion-cta-students .student-female {
+        max-height: 290px !important;
       }
-      .tal-footer-main-grid {
-        grid-template-columns: 1.15fr 1fr !important;
-        gap: 36px 32px !important;
+      .talvion-cta-students .student-male {
+        max-height: 310px !important;
       }
-      .tal-col-brand {
-        grid-column: 1 / 2 !important;
+      .talvion-cta-heading {
+        font-size: 32px !important;
       }
-      .tal-col-contact {
-        grid-column: 2 / 3 !important;
-      }
-      .tal-col-courses {
-        grid-column: 1 / 2 !important;
-      }
-      .tal-col-company {
-        grid-column: 2 / 3 !important;
-      }
-      .tal-contact-list {
-        flex-direction: column !important;
-        gap: 15px !important;
-      }
-      .tal-footer-bottom {
-        margin-top: 40px !important;
-      }
-    }
-
-    /* 3. Mobile Devices (<= 600px) */
-    @media (max-width: 600px) {
-      .talvion-exact-footer {
-        padding: 45px 0 35px 0 !important;
-      }
-      .talvion-exact-footer.talvion-with-cta-overlap {
-        padding-top: 95px !important;
-      }
-      .tal-footer-container {
-        padding: 0 20px !important;
-      }
-      .tal-footer-main-grid {
+      .talvion-footer-grid {
         grid-template-columns: 1fr 1fr !important;
-        gap: 30px 18px !important;
+        gap: 36px !important;
       }
-      .tal-col-brand {
-        grid-column: 1 / -1 !important;
+    }
+
+    @media (max-width: 768px) {
+      .talvion-cta-wrap {
+        margin: 0 auto -90px auto !important;
       }
-      .tal-col-brand .tal-brand-logo img {
-        height: 38px !important;
-      }
-      .tal-col-brand .tal-brand-desc {
-        font-size: 14px !important;
-        max-width: 100% !important;
-        margin-bottom: 20px !important;
-      }
-      .tal-col-courses {
-        grid-column: 1 / 2 !important;
-      }
-      .tal-col-company {
-        grid-column: 2 / 3 !important;
-      }
-      .tal-col-contact {
-        grid-column: 1 / -1 !important;
-        margin-top: 6px !important;
-      }
-      .tal-contact-list {
+      .talvion-cta-card {
+        padding: 34px 20px 0 20px !important;
         flex-direction: column !important;
-        gap: 14px !important;
+        align-items: center !important;
+        text-align: center !important;
+        min-height: auto !important;
+        overflow: hidden !important;
       }
-      .tal-contact-text {
+      .talvion-cta-content {
+        max-width: 100% !important;
+        margin-bottom: 0 !important;
+      }
+      .talvion-cta-tag {
+        font-size: 12px !important;
+        margin-bottom: 10px !important;
+      }
+      .talvion-cta-heading {
+        font-size: 26px !important;
+        line-height: 1.2 !important;
+        margin: 0 0 12px 0 !important;
+      }
+      .talvion-cta-sub {
+        font-size: 14.5px !important;
+        line-height: 1.5 !important;
+        margin: 0 auto 20px auto !important;
+        max-width: 420px !important;
+      }
+      .talvion-cta-btn {
+        padding: 12px 28px !important;
         font-size: 14.5px !important;
       }
-      .tal-footer-bottom {
+      .talvion-cta-students {
+        position: relative !important;
+        right: auto !important;
+        bottom: 0 !important;
+        height: auto !important;
+        margin-top: 16px !important;
+        margin-bottom: -8px !important;
+        padding-bottom: 0 !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        line-height: 0 !important;
+        width: 100% !important;
+      }
+      .talvion-cta-students .student-female {
+        max-height: 255px !important;
+        width: auto !important;
+        display: block !important;
+        vertical-align: bottom !important;
+        margin-right: -36px !important;
+        margin-bottom: 0 !important;
+        object-position: bottom !important;
+        position: relative !important;
+        z-index: 2 !important;
+      }
+      .talvion-cta-students .student-male {
+        max-height: 275px !important;
+        width: auto !important;
+        display: block !important;
+        vertical-align: bottom !important;
+        margin-bottom: 0 !important;
+        object-position: bottom !important;
+        position: relative !important;
+        z-index: 1 !important;
+      }
+      .talvion-dark-footer {
+        padding-top: 140px !important;
+      }
+      .talvion-footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      .tal-fbottom-bar {
         flex-direction: column !important;
         align-items: flex-start !important;
-        gap: 18px !important;
-        margin-top: 36px !important;
-        padding-top: 22px !important;
-      }
-      .tal-footer-motto-wrap {
-        width: 100% !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-      }
-      .tal-footer-motto {
-        font-size: 13.5px !important;
-      }
-    }
-
-    /* 4. Extra Small Mobile (<= 380px) */
-    @media (max-width: 380px) {
-      .talvion-exact-footer.talvion-with-cta-overlap {
-        padding-top: 85px !important;
-      }
-      .tal-footer-container {
-        padding: 0 16px !important;
-      }
-      .tal-footer-heading {
-        font-size: 13.5px !important;
-        margin-bottom: 16px !important;
-      }
-      .tal-footer-links a {
-        font-size: 13.5px !important;
-      }
-      .tal-contact-text {
-        font-size: 13.5px !important;
-      }
-      .tal-contact-badge {
-        width: 40px !important;
-        height: 40px !important;
-      }
-      .tal-contact-badge svg {
-        width: 18px !important;
-        height: 18px !important;
-      }
-      .tal-footer-motto {
-        font-size: 12.5px !important;
+        gap: 14px !important;
       }
     }
   </style>
 
-  <div class="tal-footer-container">
-    <div class="tal-footer-main-grid">
-      <!-- Col 1: Brand -->
-      <div class="tal-col-brand">
-        <a href="/home.html" class="tal-brand-logo" aria-label="Talvion Home">
-          <img src="/brand/talvion-logo-white.png" alt="Talvion Logo" onerror="this.onerror=null; this.src='https://talvionix.in/brand/talvion-logo.png';">
-        </a>
-        <p class="tal-brand-desc">Empowering learners with industry-ready AI &amp; Data skills. Join thousands of students building their tech careers.</p>
-        <div class="tal-social-buttons">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="tal-social-btn tal-social-fb" aria-label="Facebook">
-            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="tal-social-btn tal-social-ig" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="tal-social-btn tal-social-yt" aria-label="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="tal-social-btn tal-social-li" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-        </div>
+  <!-- OVERLAPPING CTA BANNER -->
+  <div class="talvion-cta-wrap">
+    <div class="talvion-cta-card">
+      <div class="talvion-cta-content">
+        <span class="talvion-cta-tag">JOIN US</span>
+        <h3 class="talvion-cta-heading">Join us and achieve your goals<span class="red-dot">.</span></h3>
+        <p class="talvion-cta-sub">Choose from over 210,000 online video courses with new additions published every month</p>
+        <a href="/courses.html" class="talvion-cta-btn">Get started today</a>
       </div>
 
-      <!-- Col 2: Courses -->
-      <div class="tal-col-courses">
-        <h4 class="tal-footer-heading">COURSES</h4>
-        <ul class="tal-footer-links">
-          <li><a href="/courses.html">All programs</a></li>
-          <li><a href="/courses/path-to-financial-independence-strategies-for-financial-freedom/index.html">AI Automation</a></li>
-          <li><a href="/courses.html">AI For Beginners</a></li>
-          <li><a href="/courses/the-data-science-course-2023-complete-data-science/index.html">Data Engineers</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 3: Company -->
-      <div class="tal-col-company">
-        <h4 class="tal-footer-heading">COMPANY</h4>
-        <ul class="tal-footer-links">
-          <li><a href="/about.html">About Us</a></li>
-          <li><a href="/about.html#careers">Careers</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Get In Touch -->
-      <div class="tal-col-contact">
-        <h4 class="tal-footer-heading">GET IN TOUCH</h4>
-        <div class="tal-contact-list">
-          <a href="tel:+917056537040" class="tal-contact-row">
-            <div class="tal-contact-badge tal-badge-phone">
-              <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2a7 7 0 0 1 7 7z"/></svg>
-            </div>
-            <span class="tal-contact-text">+9170565 37040</span>
-          </a>
-          <a href="https://wa.me/917056537040" target="_blank" rel="noopener noreferrer" class="tal-contact-row">
-            <div class="tal-contact-badge tal-badge-whatsapp">
-              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            </div>
-            <span class="tal-contact-text">+9170565 37040</span>
-          </a>
-          <a href="mailto:info@talvioniix.com" class="tal-contact-row">
-            <div class="tal-contact-badge tal-badge-email">
-              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            </div>
-            <span class="tal-contact-text">info@talvioniix.com</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Bar -->
-    <div class="tal-footer-bottom">
-      <p class="tal-footer-copy">© 2026 TALVION. All rights reserved.</p>
-      
-      <div class="tal-footer-motto-wrap">
-        <div class="tal-footer-motto">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"/>
-          </svg>
-          <span>Empowering Modern Tech Careers</span>
-        </div>
-
-        <button type="button" class="tal-back-to-top" id="talvionBackToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-          <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-        </button>
+      <div class="talvion-cta-students" aria-hidden="true">
+        <img class="student-female" src="/course-assets/business-finance-employment-female.png" alt="Female Student" loading="lazy" />
+        <img class="student-male" src="/course-assets/university-study-abroad-1.png" alt="Male Student" loading="lazy" />
       </div>
     </div>
   </div>
-</footer>
-<script id="talvion-cta-students-parallax-script">
-(function() {
-  function initStudentsParallax() {
-    var containers = document.querySelectorAll('.elementor-element-30a5cb3');
-    if (!containers.length) return;
 
-    containers.forEach(function(container) {
-      var banner = container.closest('.elementor-element-3872b62') || container.parentElement;
-      var girl = container.querySelector('.elementor-element-e9230b4');
-      var boy = container.querySelector('.elementor-element-0964be8');
-      if (!banner) return;
+  <!-- AUTHENTIC DARK PATTERNED FOOTER -->
+  <footer class="talvion-dark-footer" id="colophon">
+    <div class="talvion-footer-inner">
+      <div class="talvion-footer-grid">
+        
+        <!-- Column 1: Brand & Socials -->
+        <div class="tal-fcol tal-fcol-brand">
+          <a href="/home.html" class="tal-flogo" aria-label="Talvion Home">
+            <img src="/brand/talvion-logo-white.png" alt="Talvion" />
+          </a>
+          <p class="tal-ftagline">Empowering learners with industry-ready AI &amp; Data skills. Join thousands of students building their tech careers.</p>
+          <div class="tal-fsocial-buttons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="tal-fsocial-btn tal-fsocial-fb" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="tal-fsocial-btn tal-fsocial-ig" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="tal-fsocial-btn tal-fsocial-yt" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="tal-fsocial-btn tal-fsocial-li" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
 
-      // Animate left text entrance when in view
-      var leftCol = banner.querySelector('.elementor-element-fcbddd8');
-      if (leftCol) {
-        if ('IntersectionObserver' in window) {
-          var obs = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-              if (entry.isIntersecting) {
-                leftCol.classList.add('talvion-cta-animated');
-                obs.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.15 });
-          obs.observe(banner);
-        } else {
-          leftCol.classList.add('talvion-cta-animated');
+        <!-- Column 2: COURSES -->
+        <div class="tal-fcol">
+          <div class="tal-fcol-title">COURSES</div>
+          <ul class="tal-flinks">
+            <li><a href="/courses.html">All programs</a></li>
+            <li><a href="/courses.html">AI Automation</a></li>
+            <li><a href="/courses.html">AI For Beginners</a></li>
+            <li><a href="/courses.html">Data Engineers</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: COMPANY -->
+        <div class="tal-fcol">
+          <div class="tal-fcol-title">COMPANY</div>
+          <ul class="tal-flinks">
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/about.html">Careers</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: GET IN TOUCH -->
+        <div class="tal-fcol tal-fcol-contact">
+          <div class="tal-fcol-title tal-fcol-touch">GET IN TOUCH</div>
+          
+          <div class="tal-fcontact-list">
+            <!-- Phone -->
+            <a href="tel:+917056537040" class="tal-fcontact-row" aria-label="Phone: +9170565 37040">
+              <div class="tal-fcontact-badge tal-fbadge-phone" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <span class="tal-fcontact-text">+9170565 37040</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/917056537040" target="_blank" rel="noopener noreferrer" class="tal-fcontact-row" aria-label="WhatsApp: +9170565 37040">
+              <div class="tal-fcontact-badge tal-fbadge-whatsapp" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </div>
+              <span class="tal-fcontact-text">+9170565 37040</span>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:info@talvioniix.com" class="tal-fcontact-row" aria-label="Email: info@talvioniix.com">
+              <div class="tal-fcontact-badge tal-fbadge-email" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <span class="tal-fcontact-text">info@talvioniix.com</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTTOM BAR -->
+      <div class="tal-fbottom-bar">
+        <div class="tal-fcopyright">
+          &copy; 2026 TALVION. All rights reserved.
+        </div>
+        <div class="tal-fmotto-wrap">
+          <div class="tal-fmotto">
+            <svg viewBox="0 0 24 24"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"/></svg>
+            <span>Empowering Modern Tech Careers</span>
+          </div>
+          <button type="button" class="tal-fbottom-top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'});" aria-label="Back to top">
+            <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA STUDENTS SCROLL PARALLAX SCRIPT -->
+  <script id="talvion-cta-students-parallax-script">
+  (function () {
+    function initStudentsParallax() {
+      var wrappers = document.querySelectorAll('.talvion-footer-wrapper');
+      wrappers.forEach(function (wrapper) {
+        var card = wrapper.querySelector('.talvion-cta-card');
+        var girl = wrapper.querySelector('.student-female');
+        var boy = wrapper.querySelector('.student-male');
+        if (!card || !girl || !boy) return;
+
+        var ticking = false;
+
+        function update() {
+          var rect = card.getBoundingClientRect();
+          var vh = window.innerHeight || document.documentElement.clientHeight;
+          var isMobile = window.innerWidth < 768;
+
+          var maxOffset = isMobile ? 22 : 65;
+          var enterY = vh;
+          var targetY = vh * 0.22;
+
+          var progress = (enterY - rect.top) / (enterY - targetY);
+          progress = Math.max(0, Math.min(1.1, progress));
+
+          var girlX = -maxOffset + (progress * (maxOffset + (isMobile ? 3 : 10)));
+          var boyX = maxOffset - (progress * (maxOffset + (isMobile ? 3 : 10)));
+
+          girl.style.transform = 'translate3d(' + girlX.toFixed(1) + 'px, 0, 0)';
+          boy.style.transform = 'translate3d(' + boyX.toFixed(1) + 'px, 0, 0)';
+
+          ticking = false;
         }
-      }
 
-      if (!girl || !boy) return;
-
-      var ticking = false;
-
-      function update() {
-        var rect = banner.getBoundingClientRect();
-        var vh = window.innerHeight || document.documentElement.clientHeight;
-        var isMobile = window.innerWidth < 768;
-
-        var maxOffset = isMobile ? 12 : 85;
-        var enterY = vh;
-        var targetY = vh * 0.15;
-
-        var progress = (enterY - rect.top) / (enterY - targetY);
-        progress = Math.max(0, Math.min(1, progress));
-
-        var girlX = -maxOffset + (progress * (maxOffset + (isMobile ? 2 : 10)));
-        var boyX = maxOffset - (progress * (maxOffset + (isMobile ? 2 : 10)));
-
-        girl.style.transform = 'translate3d(' + girlX.toFixed(1) + 'px, 0, 0)';
-        boy.style.transform = 'translate3d(' + boyX.toFixed(1) + 'px, 0, 0)';
-
-        ticking = false;
-      }
-
-      function onScroll() {
-        if (!ticking) {
-          window.requestAnimationFrame(update);
-          ticking = true;
+        function onScroll() {
+          if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+          }
         }
-      }
 
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', onScroll, { passive: true });
-      update();
-    });
-  }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        update();
+      });
+    }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initStudentsParallax);
-  } else {
-    initStudentsParallax();
-  }
-})();
-</script><!-- #colophon -->
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initStudentsParallax);
+    } else {
+      initStudentsParallax();
+    }
+    window.addEventListener('load', initStudentsParallax);
+  })();
+  </script>
+</div>
+
+
+
+
+
+
+<!-- #colophon -->
         </div><!-- #page -->
  
 <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="speculationrules">
@@ -4557,5 +4888,299 @@ window._nslDOMReady(function () {
             }
         })
     }
-});})();</script></body>
+});})();</script>
+<script id="talvion-offcanvas-toggle-script">
+(function() {
+  function initMobileDrawer() {
+    function setDrawer(open) {
+      var overlays = document.querySelectorAll('.jws-offcanvas-parent-wrapper, [id$="-overlay"]');
+      overlays.forEach(function(el) {
+        if (open) {
+          el.classList.add('active');
+          var drawer = el.querySelector('.jws-offcanvas');
+          if (drawer) drawer.classList.add('active', 'jws-offcanvas-show');
+        } else {
+          el.classList.remove('active');
+          var drawer = el.querySelector('.jws-offcanvas');
+          if (drawer) drawer.classList.remove('active', 'jws-offcanvas-show');
+        }
+      });
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    // Direct event binding on all trigger links and buttons
+    var triggers = document.querySelectorAll('.jws-offcanvas-trigger, [data-offcanvas="2b5392e"], .jws-elementor-button');
+    triggers.forEach(function(t) {
+      t.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(true);
+      };
+    });
+
+    // Direct event binding on drawer close buttons
+    var closeButtons = document.querySelectorAll('.jws-offcanvas-close, .talvion-drawer-close');
+    closeButtons.forEach(function(b) {
+      b.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(false);
+      };
+    });
+
+    // Direct event binding on accordion toggles
+    var accordionButtons = document.querySelectorAll('.talvion-accordion-btn');
+    accordionButtons.forEach(function(b) {
+      b.onclick = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parentLi = b.closest('.has-sub-accordion');
+        if (parentLi) {
+          parentLi.classList.toggle('expanded');
+        }
+      };
+    });
+
+    // Global click delegation
+    document.addEventListener('click', function(e) {
+      // 1. Hamburger button click
+      var trigger = e.target.closest('.jws-offcanvas-trigger') || e.target.closest('a[data-offcanvas]');
+      if (trigger) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(true);
+        return;
+      }
+
+      // 2. Close button or overlay
+      var closeBtn = e.target.closest('.jws-offcanvas-close') || e.target.closest('.talvion-drawer-close') || e.target.closest('.jws-offcanvas-overlay');
+      if (closeBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        setDrawer(false);
+        return;
+      }
+
+      // 3. Accordion toggle
+      var accBtn = e.target.closest('.talvion-accordion-btn');
+      if (accBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parentLi = accBtn.closest('.has-sub-accordion');
+        if (parentLi) {
+          parentLi.classList.toggle('expanded');
+        }
+        return;
+      }
+
+      // 4. Click nav link inside drawer
+      var navLink = e.target.closest('.talvion-nav-link') || e.target.closest('.talvion-sub-menu a') || e.target.closest('.talvion-drawer-apply-btn');
+      if (navLink && !e.target.closest('.talvion-accordion-btn')) {
+        setDrawer(false);
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        setDrawer(false);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileDrawer);
+  } else {
+    initMobileDrawer();
+  }
+  window.addEventListener('load', initMobileDrawer);
+})();
+</script>
+
+<!-- ========================================================= -->
+<!-- TALVION: FIXED FLOATING CALL & WHATSAPP QUICK ACTION BUTTONS -->
+<!-- ========================================================= -->
+<div class="talvion-floating-actions" id="talvion-floating-actions" aria-label="Quick Contact Actions">
+  <!-- Call Button -->
+  <a href="tel:+917056537040" class="talvion-float-btn talvion-float-call" aria-label="Call Talvion at +917056537040">
+    <span class="talvion-float-tooltip">Call: +91 70565 37040</span>
+    <div class="talvion-float-icon">
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917056537040" target="_blank" rel="noopener noreferrer" class="talvion-float-btn talvion-float-whatsapp" aria-label="Chat with Talvion on WhatsApp">
+    <span class="talvion-float-tooltip">Chat on WhatsApp</span>
+    <div class="talvion-float-icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+</div>
+
+<style id="talvion-floating-actions-styles">
+/* ========================================================
+   TALVION: Permanently Fixed Floating Call & WhatsApp Buttons
+   ======================================================== */
+.talvion-floating-actions {
+  position: fixed !important;
+  right: 22px !important;
+  bottom: 85px !important;
+  z-index: 999990 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  align-items: flex-end !important;
+  pointer-events: none !important;
+}
+
+.talvion-float-btn {
+  pointer-events: auto !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease !important;
+  will-change: transform !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+}
+
+.talvion-float-btn:hover {
+  transform: scale(1.1) translateY(-2px) !important;
+}
+
+.talvion-float-btn:active {
+  transform: scale(0.95) !important;
+}
+
+/* Call Button */
+.talvion-float-call {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%) !important;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  animation: talvionPulseBlue 3s infinite ease-in-out !important;
+}
+
+.talvion-float-call:hover {
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.6) !important;
+}
+
+/* WhatsApp Button */
+.talvion-float-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  animation: talvionPulseGreen 3s infinite ease-in-out !important;
+  animation-delay: 1.5s !important;
+}
+
+.talvion-float-whatsapp:hover {
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.6) !important;
+}
+
+.talvion-float-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.talvion-float-icon svg {
+  display: block !important;
+  transition: transform 0.25s ease !important;
+}
+
+.talvion-float-btn:hover .talvion-float-icon svg {
+  transform: scale(1.08) !important;
+}
+
+/* Desktop Tooltip */
+.talvion-float-tooltip {
+  position: absolute !important;
+  right: calc(100% + 12px) !important;
+  top: 50% !important;
+  transform: translateY(-50%) translateX(8px) !important;
+  background: #030f40 !important;
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  padding: 6px 14px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 18px rgba(3, 15, 64, 0.25) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+
+.talvion-float-tooltip::after {
+  content: '' !important;
+  position: absolute !important;
+  right: -5px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  border-width: 5px 0 5px 6px !important;
+  border-style: solid !important;
+  border-color: transparent transparent transparent #030f40 !important;
+}
+
+.talvion-float-btn:hover .talvion-float-tooltip {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(-50%) translateX(0) !important;
+}
+
+/* Pulse Animations */
+@keyframes talvionPulseBlue {
+  0% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.6), 0 8px 24px rgba(14, 165, 233, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(14, 165, 233, 0), 0 8px 24px rgba(14, 165, 233, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0), 0 8px 24px rgba(14, 165, 233, 0.45);
+  }
+}
+
+@keyframes talvionPulseGreen {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 8px 24px rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0), 0 8px 24px rgba(37, 211, 102, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 8px 24px rgba(37, 211, 102, 0.45);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .talvion-floating-actions {
+    right: 16px !important;
+    bottom: 78px !important;
+    gap: 10px !important;
+  }
+  .talvion-float-btn {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .talvion-float-tooltip {
+    display: none !important;
+  }
+}
+</style>
+</body>
 </html>
